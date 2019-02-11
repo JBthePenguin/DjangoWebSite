@@ -1,0 +1,7 @@
+env/
+
+websitedjango/__pycache__/
+
+websiteapp/__pycache__/
+
+websiteapp/migrations/__pycache__/
