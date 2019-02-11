@@ -1,5 +1,5 @@
 # Strucure of a Django Web Site
-**A structure of a Web site with a presentation, a portfolio, a blog and a contact page and using the framework [Django](https://www.djangoproject.com/).
+**A structure of a Web site with a presentation, a portfolio, a blog, a contact page and using the frameworks [Django](https://www.djangoproject.com/), [Bootstrap4](https://getbootstrap.com/), [jQuery](https://jquery.com/).
 So, to install and use it :**
 ## Create a PostgreSQL database for the application and a new user
 *!!! maybe you have to install [PostgreSQL](https://www.postgresql.org/) !!!*
@@ -34,9 +34,8 @@ Create a "superuser" account:
 ```shell
 (env)$ python manage.py createsuperuser
 ```
-## Start and use the Application**
+## Start and use the Application
 ```shell
 (env)$ python manage.py runserver
 ```
-**NOW, with your favorite browser, go to this url [http://127.0.0.1:8000/](http://127.0.0.1:8000/) and enjoy to use application.**
-For login to the [admin site : http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin) and enter your superuser name and password.
+**NOW, with your favorite browser, go to this url [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to use the application and [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin) for the admin site.**
