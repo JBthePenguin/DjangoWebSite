@@ -17,15 +17,19 @@ a:focus {
     color: white;
 }
 
-.navbar-dark .navbar-nav .active > .nav-link {
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar .navbar-nav .active > .nav-link {
     color: red;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
+.navbar .navbar-nav .nav-link:hover {
     color:#ff9582;
 }
 
-.navbar-dark .navbar-nav .nav-link:focus{
+.navbar .navbar-nav .nav-link:focus{
     color: red;
 }
 
@@ -52,13 +56,28 @@ a:focus {
 /* FOOTER */
 
 footer {
-    color: white;
     font-size: 15px;
     position: absolute;
     bottom: 0;
     width: 100%;
     padding-top: 2px;
     padding-bottom: 2px;
+}
+
+footer.bg-dark {
+    color: white;    
+}
+
+footer.bg-light {
+    color: black;    
+}
+
+.bg-dark .fa-github {
+    color: white;
+}
+
+.bg-light .fa-github {
+    color: black;
 }
 
 /* HEADER */

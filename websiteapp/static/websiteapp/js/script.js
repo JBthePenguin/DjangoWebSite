@@ -14,3 +14,21 @@
     }
   });
 })(jQuery);
+
+// Theme
+$(document).ready(function() {
+  $("#theme-check").change(function() {
+    if(this.checked) {
+        url_theme = "/change_theme/dark/";
+    } else {
+        url_theme = "/change_theme/light/";
+    }
+    $.ajax({
+      type: 'GET',
+      url: url_theme,
+      success: function(data) {
+        location.reload();
+      }
+    });
+  });
+});

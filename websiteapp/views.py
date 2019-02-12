@@ -1,12 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
+from websitedjango import settings
 
 
 def index(request):
     # index view
-    context = {"index": "active"}
+    context = {
+        "index": "active",
+        "theme": settings.THEME
+    }
     return render(request, 'websiteapp/index.html', context)
+
+
+def change_theme(request, theme):
+    settings.THEME = theme
+    return HttpResponse("OK")
 
 
 def mentions(request):
     """ return the page with legal mentions"""
-    return render(request, 'websiteapp/mentions.html')
+    context = {"theme": settings.THEME}
+    return render(request, 'websiteapp/mentions.html', context)

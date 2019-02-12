@@ -25,7 +25,7 @@
 <body>
     <!-- NAVBAR -->
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar">
+    <nav class="navbar navbar-expand-lg{% if theme == 'dark' %} navbar-dark bg-dark{% else %} navbar-light bg-light{% endif %} fixed-top scrolling-navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="http://placehold.it/150x50?text=Logo" alt="">
@@ -57,13 +57,13 @@
     <!-- -->
     {% block content %}{% endblock %}
     <!-- Footer -->
-    <footer class="container-fluid bg-dark">
+    <footer class="container-fluid{% if theme == 'dark' %} bg-dark{% else %} bg-light{% endif%}">
         <div class="row">
             <div class="col-lg-3 text-center col-xs-12">
-                <i>Suivez-moi: </i><a href="https://github.com/JBthePenguin/" onclick="window.open(this.href);  return false;"><i class="fa fa-github text-white"></i></a> <a href="https://twitter.com/JBthePenguin/" onclick="window.open(this.href);  return false;"><i class="fa fa-twitter text-info"></i></a>  <a href="https://www.linkedin.com/in/jean-baptiste-labaty-a5b084155/" onclick="window.open(this.href);  return false;"><i class="fa fa-linkedin text-primary"></i></a>
+                <i>Suivez-moi: </i><a href="https://github.com/JBthePenguin/" onclick="window.open(this.href);  return false;"><i class="fa fa-github"></i></a> <a href="https://twitter.com/JBthePenguin/" onclick="window.open(this.href);  return false;"><i class="fa fa-twitter text-info"></i></a>  <a href="https://www.linkedin.com/in/jean-baptiste-labaty-a5b084155/" onclick="window.open(this.href);  return false;"><i class="fa fa-linkedin text-primary"></i></a>
             </div>
             <div class="col-lg-2 text-center col-6">
-                <i>Thème: </i><input type="checkbox" checked data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="danger" data-offstyle="danger" data-size="xs">
+                <i>Thème: </i><input id="theme-check" type="checkbox"{% if theme == 'dark' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="danger" data-offstyle="danger" data-size="xs">
             </div>
             <div class="col-lg-2 text-center col-6">
                 <i>Langue: </i><input type="checkbox" checked data-toggle="toggle" data-on="Fr" data-off="En" data-onstyle="danger" data-offstyle="danger" data-size="xs">
@@ -79,6 +79,7 @@
     <!--  -->
     <!-- JQuery -->
     <script src="{% static 'websiteapp/jquery/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'websiteapp/jquery/jquery-3.3.1.min.js' %}"></script>
     <!-- Bootstrap JavaScript -->
     <script src="{% static 'websiteapp/bootstrap/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'websiteapp/bootstrap/js/bootstrap4-toggle.min.js' %}"></script>
