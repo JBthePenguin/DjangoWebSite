@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="fr">
+<html lang={{ language }}>
 
 <head>
     <meta charset="utf-8">
@@ -12,7 +12,11 @@
     <!-- Favicon -->
     <link rel="icon" href="{% static 'websiteapp/img/favicon.png' %}" type="image/x-icon" />
     
-    <title>Titre du site</title>    
+    <title>
+        {% if language == 'fr' %}Titre du site
+        {% else %} Site's Title
+        {% endif %}
+    </title>    
     
     <!-- Bootstrap CSS -->
     <link href="{% static 'websiteapp/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -39,7 +43,11 @@
                         <a class="nav-link" href="{% url 'index' %}"><i class="fa fa-home"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">&Agrave; propos</a>
+                        <a class="nav-link" href="#">
+                            {% if language == 'fr' %}&Agrave; propos
+                            {% else %} About
+                            {% endif %}
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Portfolio</a>
@@ -60,16 +68,32 @@
     <footer class="container-fluid{% if theme == 'dark' %} bg-dark{% else %} bg-light{% endif%}">
         <div class="row">
             <div class="col-lg-3 text-center col-xs-12">
-                <i>Suivez-moi: </i><a href="https://github.com/JBthePenguin/" onclick="window.open(this.href);  return false;"><i class="fa fa-github"></i></a> <a href="https://twitter.com/JBthePenguin/" onclick="window.open(this.href);  return false;"><i class="fa fa-twitter text-info"></i></a>  <a href="https://www.linkedin.com/in/jean-baptiste-labaty-a5b084155/" onclick="window.open(this.href);  return false;"><i class="fa fa-linkedin text-primary"></i></a>
+                <i>
+                    {% if language == 'fr' %}Suivez-moi: 
+                    {% else %}Follow me: 
+                    {% endif %}
+                </i><a href="https://github.com/JBthePenguin/" onclick="window.open(this.href);  return false;"><i class="fa fa-github"></i></a> <a href="https://twitter.com/JBthePenguin/" onclick="window.open(this.href);  return false;"><i class="fa fa-twitter text-info"></i></a>  <a href="https://www.linkedin.com/in/jean-baptiste-labaty-a5b084155/" onclick="window.open(this.href);  return false;"><i class="fa fa-linkedin text-primary"></i></a>
             </div>
             <div class="col-lg-2 text-center col-6">
-                <i>Thème: </i><input id="theme-check" type="checkbox"{% if theme == 'dark' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="danger" data-offstyle="danger" data-size="xs">
+                <i>
+                    {% if language == 'fr' %}Thème:
+                    {% else %}Theme: 
+                    {% endif %} 
+                </i><input id="theme-check" type="checkbox"{% if theme == 'dark' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="danger" data-offstyle="danger" data-size="xs">
             </div>
             <div class="col-lg-2 text-center col-6">
-                <i>Langue: </i><input type="checkbox" checked data-toggle="toggle" data-on="Fr" data-off="En" data-onstyle="danger" data-offstyle="danger" data-size="xs">
+                <i> 
+                    {% if language == 'fr' %}Langue: 
+                    {% else %}Language
+                    {% endif %}
+                </i><input id="lang-check" type="checkbox"{% if language == 'fr' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Fr" data-off="En" data-onstyle="danger" data-offstyle="danger" data-size="xs">
             </div>
             <div class="col-lg-2 text-center col-6">
-                <small><a href="{% url 'mentions' %}" class="text-danger">Mentions légales</a></small>
+                <small><a href="{% url 'mentions' %}" class="text-danger">
+                    {% if language == 'fr' %}Mentions légales
+                    {% else %}Legal notices
+                    {% endif %}
+                </a></small>
             </div>
             <div class="col-lg-2 text-center col-6">
                 <small>©2019 NoRightReserved</small>

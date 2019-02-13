@@ -4,9 +4,13 @@
 
 {% block content %}
 <header>
-	I am mentions
+    {% if language == 'fr' %}Je suis les mentions. 
+    {% else %}I am the notices.
+    {% endif %}
 </header>
 <main>
-	main content here
+    {% if language == 'fr' %}Ici en français. 
+    {% else %}Here in english. 
+    {% endif %}
 </main>
 {% endblock %}

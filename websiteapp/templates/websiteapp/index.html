@@ -3,10 +3,14 @@
 {% load static %}
 
 {% block content %}
-<header>
-    I am index page
+<header>    
+    {% if language == 'fr' %}Je suis la page d'accueil 
+    {% else %}I am the index page.
+    {% endif %}
 </header>
 <main>
-    main content here
+    {% if language == 'fr' %}Ici en français. 
+    {% else %}Here in english. 
+    {% endif %}
 </main>
 {% endblock %}
