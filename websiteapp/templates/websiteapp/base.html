@@ -30,33 +30,33 @@
     <!-- NAVBAR -->
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg{% if theme == 'dark' %} navbar-dark bg-dark{% else %} navbar-light bg-light{% endif %} fixed-top scrolling-navbar">
+        <a class="navbar-brand" href="#">
+            <img src="http://placehold.it/150x50?text=Logo" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="http://placehold.it/150x50?text=Logo" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto text-center">
                     <li class="nav-item {{ index }}">
                         <a class="nav-link" href="{% url 'index' %}"><i class="fa fa-home"></i></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
+                    <li class="nav-item {{ about }}">
+                        <a class="nav-link" href="{% url 'about' %}">
                             {% if language == 'fr' %}&Agrave; propos
                             {% else %} About
                             {% endif %}
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
+                    <li class="nav-item {{ portfolio }}">
+                        <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                    <li class="nav-item {{ blog }}">
+                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                    <li class="nav-item {{ contact }}">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -79,14 +79,14 @@
                     {% if language == 'fr' %}Thème:
                     {% else %}Theme: 
                     {% endif %} 
-                </i><input id="theme-check" type="checkbox"{% if theme == 'dark' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="danger" data-offstyle="danger" data-size="xs">
+                </i><input id="theme-check" type="checkbox"{% if theme == 'dark' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="success" data-offstyle="success" data-size="xs">
             </div>
             <div class="col-lg-2 text-center col-6">
                 <i> 
                     {% if language == 'fr' %}Langue: 
                     {% else %}Language
                     {% endif %}
-                </i><input id="lang-check" type="checkbox"{% if language == 'fr' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Fr" data-off="En" data-onstyle="danger" data-offstyle="danger" data-size="xs">
+                </i><input id="lang-check" type="checkbox"{% if language == 'fr' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Fr" data-off="En" data-onstyle="success" data-offstyle="success" data-size="xs">
             </div>
             <div class="col-lg-2 text-center col-6">
                 <small><a href="{% url 'mentions' %}" class="text-danger">

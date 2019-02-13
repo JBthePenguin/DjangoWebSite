@@ -66,6 +66,18 @@ class BrowseBaseTests(Browser):
         # Index
         assert_click_on_link(0, "index")
         assert_link_color(0)
+        # About
+        assert_click_on_link(1, "about")
+        assert_link_color(1)
+        # Portfolio
+        assert_click_on_link(2, "portfolio")
+        assert_link_color(2)
+        # Blog
+        assert_click_on_link(3, "blog")
+        assert_link_color(3)
+        # Contact
+        assert_click_on_link(4, "contact")
+        assert_link_color(4)
 
     def test_footer(self):
         """ test for footer"""
