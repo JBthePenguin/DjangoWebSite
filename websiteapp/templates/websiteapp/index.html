@@ -3,14 +3,14 @@
 {% load static %}
 
 {% block content %}
-<header>    
+<header id="header_index" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">    
     {% if language == 'fr' %}Je suis la page d'accueil 
     {% else %}I am the index page.
     {% endif %}
 </header>
-<main>
+<main class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     {% if language == 'fr' %}Ici en français. 
-    {% else %}Here in english. 
+    {% else %}Here in english.
     {% endif %}
 </main>
 {% endblock %}

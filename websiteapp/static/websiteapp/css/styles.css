@@ -7,6 +7,14 @@ a:focus {
     outline:0;
 }
 
+.bg-dark {
+    background-color: black !important;
+}
+
+.bg-light {
+    background-color: white !important;
+}
+
 /* NAVBAR */
 
 .navbar-nav {
@@ -72,11 +80,11 @@ footer.bg-light {
     color: black;    
 }
 
-.bg-dark .fa-github {
+footer.bg-dark .fa-github {
     color: white;
 }
 
-.bg-light .fa-github {
+footer.bg-light .fa-github {
     color: black;
 }
 
@@ -86,7 +94,27 @@ header {
     padding-top: 100px;
 }
 
+header.bg-dark {
+    background-color: #515151 !important;
+    color: white;
+}
+
+header.bg-light {
+    background-color: #cfcfcf !important;
+    color: black;
+}
+
 /* MAIN */
 main {
     padding-bottom: 75px;
+}
+
+main.bg-dark {
+    background-color: #626262 !important;
+    color: white;
+}
+
+main.bg-light {
+    background-color: #c7c7c7 !important;
+    color: black;
 }

@@ -39,3 +39,21 @@ Create a "superuser" account:
 (env)$ python manage.py runserver
 ```
 **NOW, with your favorite browser, go to this url [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to use the application and [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin) for the admin site.**
+## Tests
+The tests use [selenium](https://selenium-python.readthedocs.io/) and maybe you have to install [GreckoWebdriver](https://github.com/mozilla/geckodriver/releases) to use firefox.
+During the tests, a temporary database is creating, so you need to update the role of application:
+```shell
+$ sudo su - postgres
+postgres@somewhere:~$ psql
+postgres=# ALTER USER djangowebsite CREATEDB;
+postgres=# \q
+postgres@somewhere:~$ exit
+```
+Run the tests:
+```shell 
+(env)$ python manage.py test -v 2
+```
+If you want to use Chrome, install [ChromeWebDriver](http://chromedriver.chromium.org/downloads) and update in websiteapp/browser_selenium.py line 2:
+```python
+from selenium.webdriver.chrome.webdriver import WebDriver
+```
