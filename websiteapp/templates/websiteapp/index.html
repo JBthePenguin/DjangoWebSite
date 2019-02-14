@@ -5,16 +5,60 @@
 {% block content %}
 <header id="header_index" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div class="container text-center">
-        {% if language == 'fr' %}Je suis la page d'accueil 
-        {% else %}I am the index page.
-        {% endif %}
+        <h1>
+            {% if language == 'fr' %}Titre du site
+            {% else %}Site's title
+            {% endif %}
+        </h1>
+        <h3>
+            {% if language == 'fr' %}Phrase d'accroche mettant en avant le service proposé.
+            {% else %}Pickup line highlighting the proposed service.
+            {% endif %}
+        </h3> 
     </div>
 </header>
-<main class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+<main id="main_index" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div class="container">
-        {% if language == 'fr' %}Ici en français. 
-        {% else %}Here in english.
-        {% endif %}
+        <a href="{% url 'about' %}" class="text-danger"><h4>
+            {% if language == 'fr' %}&Agrave; propos 
+            {% else %}About
+            {% endif %}
+        </h4></a>
+        <p>
+            {% if language == 'fr' %}Description du responsable du site (entreprise, artisan, blogueur, ...).
+            {% else %}Description of the site's manager (company, freelancer, blogger, ...).
+            {% endif %} 
+        </p>
+    </div>
+    <div class="container">
+        <a href="{% url 'portfolio' %}" class="text-danger"><h4>
+            Portfolio
+        </h4></a>
+        <p>
+            {% if language == 'fr' %}Présentation des travaux du responsable du site (entreprise, artisan, blogueur, ...).
+            {% else %}Presentation of the works of the site's manager (company, freelancer, blogger, ...).
+            {% endif %} 
+        </p>
+    </div>
+    <div class="container">
+        <a href="{% url 'blog' %}" class="text-danger"><h4>
+            Blog
+        </h4></a>
+        <p>
+            {% if language == 'fr' %}Blog écrit par le responsable du site (entreprise, artisan, blogueur, ...).
+            {% else %}Blog written by the site's manager (company, freelancer, blogger, ...).
+            {% endif %} 
+        </p>
+    </div>
+    <div class="container">
+        <a href="{% url 'contact' %}" class="text-danger"><h4>
+            Contact
+        </h4></a>
+        <p>
+            {% if language == 'fr' %}Formulaire pour envoyer un email au responsable du site (entreprise, artisan, blogueur, ...).
+            {% else %}Form to send an email to the site's manager (company, freelancer, blogger, ...).
+            {% endif %} 
+        </p>
     </div>
 </main>
 {% endblock %}

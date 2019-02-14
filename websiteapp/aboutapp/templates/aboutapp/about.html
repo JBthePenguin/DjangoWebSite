@@ -5,16 +5,20 @@
 {% block content %}
 <header id="header_about" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div class="container text-center">
-        {% if language == 'fr' %}Je suis la page 'à propos'
-        {% else %}I am the about page.
-        {% endif %}
+        <h1>
+            {% if language == 'fr' %}&Agrave; propos
+            {% else %}About
+            {% endif %}
+        </h1>
     </div>
 </header>
-<main class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+<main id="main_about" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div class="container">
-        {% if language == 'fr' %}Ici en français. 
-        {% else %}Here in english.
-        {% endif %}
+        <p>
+            {% if language == 'fr' %}La description. 
+            {% else %}The description.
+            {% endif %}
+        </p>
     </div>
 </main>
 {% endblock %}

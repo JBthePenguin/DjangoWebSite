@@ -5,16 +5,16 @@
 {% block content %}
 <header id="header_blog" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div class="container text-center">
-        {% if language == 'fr' %}Je suis le blog 
-        {% else %}I am the blog page.
-        {% endif %}
+        <h1>Blog</h1>
     </div>
 </header>
-<main class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+<main id="main_blog" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div class="container">
-        {% if language == 'fr' %}Ici en français. 
-        {% else %}Here in english.
-        {% endif %}
+        <p>
+            {% if language == 'fr' %}Les articles. 
+            {% else %}The articles.
+            {% endif %}
+        </p>
     </div>
 </main>
 {% endblock %}

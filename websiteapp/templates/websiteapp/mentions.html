@@ -3,14 +3,22 @@
 {% load static %}
 
 {% block content %}
-<header>
-    {% if language == 'fr' %}Je suis les mentions. 
-    {% else %}I am the notices.
-    {% endif %}
+<header id="header_mentions" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+	<div class="container text-center">
+		<h1>
+    		{% if language == 'fr' %}Mentions légales. 
+    		{% else %}Legal notices.
+    		{% endif %}
+    	</h1>
+    </div>
 </header>
-<main>
-    {% if language == 'fr' %}Ici en français. 
-    {% else %}Here in english. 
-    {% endif %}
+<main id="main_mentions" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+	<div class="container">
+		<p>
+    		{% if language == 'fr' %}Ici les mentions 
+    		{% else %}Here the notices. 
+    		{% endif %}
+    	</p>
+    </div>
 </main>
 {% endblock %}

@@ -5,16 +5,16 @@
 {% block content %}
 <header id="header_contact" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div class="container text-center">
-        {% if language == 'fr' %}Je suis la page de contact 
-        {% else %}I am the contact page.
-        {% endif %}
+        <h1>Contact<h1>
     </div>
 </header>
-<main class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+<main id="main_contact" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div class="container">
-        {% if language == 'fr' %}Ici en français. 
-        {% else %}Here in english.
-        {% endif %}
+        <p>
+            {% if language == 'fr' %}Formulaire de contact. 
+            {% else %}Contact form.
+            {% endif %}
+        </p>
     </div>
 </main>
 {% endblock %}

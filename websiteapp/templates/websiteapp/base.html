@@ -26,10 +26,10 @@
     <!-- custom styles -->
     <link href="{% static 'websiteapp/css/styles.css' %}" rel="stylesheet"> 
 </head>
-<body>
+<body class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <!-- NAVBAR -->
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg{% if theme == 'dark' %} navbar-dark bg-dark{% else %} navbar-light bg-light{% endif %} fixed-top scrolling-navbar">
+    <nav class="navbar navbar-expand-lg{% if theme == 'dark' %} navbar-dark bg-dark{% else %} navbar-light bg-light{% endif %} fixed-top">
         <a class="navbar-brand" href="#">
             <img src="http://placehold.it/150x50?text=Logo" alt="">
         </a>
@@ -79,14 +79,14 @@
                     {% if language == 'fr' %}Thème:
                     {% else %}Theme: 
                     {% endif %} 
-                </i><input id="theme-check" type="checkbox"{% if theme == 'dark' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="success" data-offstyle="success" data-size="xs">
+                </i><input id="theme-check" type="checkbox"{% if theme == 'dark' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="light" data-offstyle="dark" data-size="xs">
             </div>
             <div class="col-lg-2 text-center col-6">
                 <i> 
                     {% if language == 'fr' %}Langue: 
                     {% else %}Language
                     {% endif %}
-                </i><input id="lang-check" type="checkbox"{% if language == 'fr' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Fr" data-off="En" data-onstyle="success" data-offstyle="success" data-size="xs">
+                </i><input id="lang-check" type="checkbox"{% if language == 'fr' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Fr" data-off="En" data-onstyle="{% if theme == 'dark' %}light{% else %}dark{% endif %}" data-offstyle="{% if theme == 'dark' %}light{% else %}dark{% endif %}" data-size="xs">
             </div>
             <div class="col-lg-2 text-center col-6">
                 <small><a href="{% url 'mentions' %}" class="text-danger">

@@ -9,11 +9,14 @@ a:focus {
 
 .bg-dark {
     background-color: black !important;
+    color: white; 
 }
 
 .bg-light {
     background-color: white !important;
+    color: black;
 }
+
 
 /* NAVBAR */
 
@@ -41,25 +44,6 @@ a:focus {
     color: red;
 }
 
-/* WAVE EFFECT */
-
-.navbar.scrolling-navbar {
-    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-    -o-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-.navbar.scrolling-navbar .navbar-nav > li {
-    -webkit-transition-duration: 1s;
-    -o-transition-duration: 1s;
-    transition-duration: 1s;
-}
-
-.navbar.scrolling-navbar.top-nav-collapse {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
 
 /* FOOTER */
 
@@ -68,16 +52,7 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-footer.bg-dark {
-    color: white;    
-}
-
-footer.bg-light {
-    color: black;    
+    padding: 5px;
 }
 
 footer.bg-dark .fa-github {
@@ -88,33 +63,37 @@ footer.bg-light .fa-github {
     color: black;
 }
 
+
 /* HEADER */
 
 header {
     padding-top: 100px;
+    padding-bottom: 10px;
 }
 
 header.bg-dark {
     background-color: #515151 !important;
-    color: white;
 }
 
 header.bg-light {
     background-color: #cfcfcf !important;
-    color: black;
 }
+
 
 /* MAIN */
 main {
-    padding-bottom: 75px;
+    padding : 25px 50px 50px 50px;
 }
 
-main.bg-dark {
-    background-color: #626262 !important;
-    color: white;
+main .container{
+    margin-bottom: 35px;
+    padding: 10px;
 }
 
-main.bg-light {
-    background-color: #c7c7c7 !important;
-    color: black;
+main.bg-dark .container{
+    background-color: #515151 !important;
+}
+
+main.bg-light .container{
+    background-color: #cfcfcf !important;
 }
