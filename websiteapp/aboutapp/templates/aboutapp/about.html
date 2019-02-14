@@ -10,15 +10,47 @@
             {% else %}About
             {% endif %}
         </h1>
+        <h3>
+            {% if language == 'fr' %}La phrase décrivant le responsable du site (entreprise, artisan, blogueur, ...).
+            {% else %}The sentence describing the site manager (company, freelancer, blogger, ...).
+            {% endif %}
+        </h3>
     </div>
 </header>
 <main id="main_about" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
-    <div class="container">
-        <p>
-            {% if language == 'fr' %}La description. 
-            {% else %}The description.
+    <div id="services" class="container">
+        <h4>
+            {% if language == 'fr' %}Les services
+            {% else %}The services
             {% endif %}
+        </h4>
+        <p>
+            <ul>
+                <li>Service 1</li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+            </ul>
         </p>
     </div>
+    <div id="skills" class="container">
+        <h4>
+            {% if language == 'fr' %}Les compétences
+            {% else %}The skills
+            {% endif %}
+        </h4>
+        <p>
+            <ul>
+                {% if language == 'fr' %}
+                    <li>Compétence 1</li>
+                    <li>Compétence 2</li>
+                    <li>Compétence 3</li> 
+                {% else %}
+                    <li>Skill 1</li>
+                    <li>Skill 2</li>
+                    <li>Skill 3</li> 
+                {% endif %}
+            </ul>
+        </p>
+    </div>    
 </main>
 {% endblock %}

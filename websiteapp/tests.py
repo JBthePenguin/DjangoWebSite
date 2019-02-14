@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class BrowseBaseIndexTests(Browser):
-    """ Tests for base.html"""
+    """ Tests for base.html and index.html"""
 
     def test_navbar(self):
         """ test for nav bar"""
