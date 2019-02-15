@@ -1,0 +1,57 @@
+{% extends 'websiteapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<header id="header_project" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+    <div class="container text-center">
+        <h1>
+            {% if language == 'fr' %}{{ project.category.name_fr }}
+            {% else %}{{ project.category.name_en }}
+            {% endif %}
+        </h1>
+        <h2 class="text-danger">
+            {% if language == 'fr' %}{{ project.title_fr }}
+            {% else %}{{ project.title_en }}
+            {% endif %}
+        </h2>
+        <p>{{ project.date|date:"m / Y" }}</p>
+    </div>
+</header>
+<main id="main_project" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card {% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+                    <img class="card-img-top" src="{{ project.image.url }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            {% if language == 'fr' %}{{ project.subtitle_fr }}
+                            {% else %}{{ project.subtitle_en }}
+                            {% endif %}
+                        </h5>
+                        <p class="card-text text-left">
+                            {% if language == 'fr' %}{{ project.description_fr|linebreaks }}
+                            {% else %}{{ project.description_en|linebreaks }}
+                            {% endif %}
+                        </p>
+                        <div class="text-center">
+                            <a href="{{ project.link }}" class="card-link text-danger" onclick="window.open(this.href);  return false;">
+                                {% if language == 'fr' %}Site Web
+                                {% else %}Website
+                                {% endif %}
+                            </a>
+                            <a href="{{ project.github_link }}" class="card-link text-danger" onclick="window.open(this.href);  return false;">
+                                {% if language == 'fr' %}Code source
+                                {% else %}Source code
+                                {% endif %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

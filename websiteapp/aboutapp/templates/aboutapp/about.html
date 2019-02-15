@@ -15,15 +15,19 @@
             {% else %}The sentence describing the site manager (company, freelancer, blogger, ...).
             {% endif %}
         </h3>
+        <ul>
+            <li><h4><a href="#services" class="text-danger">Services</a></li>
+            <li><h4><a href="#skills" class="text-danger">
+                {% if language == 'fr' %}Compétences
+                {% else %}Skills
+                {% endif %}
+            </a></h4></li>
+        </ul>
     </div>
 </header>
 <main id="main_about" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div id="services" class="container">
-        <h4>
-            {% if language == 'fr' %}Les services
-            {% else %}The services
-            {% endif %}
-        </h4>
+        <h4 class="text-danger">Services</h4>
         <p>
             <ul>
                 <li>Service 1</li>
@@ -33,9 +37,9 @@
         </p>
     </div>
     <div id="skills" class="container">
-        <h4>
-            {% if language == 'fr' %}Les compétences
-            {% else %}The skills
+        <h4 class="text-danger">
+            {% if language == 'fr' %}Compétences
+            {% else %}Skills
             {% endif %}
         </h4>
         <p>

@@ -3,6 +3,7 @@ html {
     min-height: 100%;
 }
 
+
 a:focus {
     outline:0;
 }
@@ -67,7 +68,7 @@ footer.bg-light .fa-github {
 /* HEADER */
 
 header {
-    padding-top: 100px;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 
@@ -79,15 +80,26 @@ header.bg-light {
     background-color: #cfcfcf !important;
 }
 
+header ul {
+    margin-left: -15px;
+}
+
+header ul li {
+    display: inline-block;
+    list-style: none;
+    padding-right: 20px;
+}
+
 
 /* MAIN */
 main {
-    padding : 25px 50px 50px 50px;
+    padding : 25px 10px 50px 10px;
 }
 
 main .container{
     margin-bottom: 35px;
     padding: 10px;
+    border-radius: 10px;
 }
 
 main.bg-dark .container{
@@ -96,4 +108,38 @@ main.bg-dark .container{
 
 main.bg-light .container{
     background-color: #cfcfcf !important;
+}
+
+main .card {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+main .card img {
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+main.bg-dark .card,
+main.bg-dark .card img {
+    border-color: white;
+}
+
+main .card .card-body {
+    border-radius: 10px;
+    margin: 15px 10px 10px 10px;
+}
+
+main.bg-dark .card .card-body {
+    background-color: #515151 !important;
+}
+
+main.bg-light .card .card-body {
+    background-color: #cfcfcf !important;
+}
+
+main .card .card-body .btn {
+    border-radius: 10px;
 }

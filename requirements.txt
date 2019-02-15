@@ -2,8 +2,14 @@ django
 
 django-debug-toolbar
 
+django-fixture-magic
+
+future
+
 psycopg2
 
 psycopg2-binary
 
 selenium
+
+Pillow

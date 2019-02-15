@@ -5,11 +5,12 @@ class BrowseAboutTests(Browser):
     """ Tests for about.html """
 
     def test_about(self):
-        """ Tests for about page"""
+        """ tests for about page"""
         self.selenium.get("".join([self.live_server_url, "/about/"]))
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")
-        self.assertIn("propos", header_title.text)
+        self.assertEqual(
+            "".join(["à".upper(), " propos"]), header_title.text)
         # main
         divs = self.selenium.find_elements_by_css_selector(
             "#main_about div")

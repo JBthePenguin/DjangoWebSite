@@ -14,14 +14,14 @@ class BrowseBaseIndexTests(Browser):
         self.assertEqual(self.selenium.title, "Titre du site")
         # nav links
         nav_links = self.selenium.find_elements_by_css_selector(
-            "nav.fixed-top .nav-link"
+            "nav.navbar .nav-link"
         )
         self.assertEqual(len(nav_links), 5)
 
         def assert_click_nav_link(ind_link, header_id):
             """assert link redirection"""
             nav_links = self.selenium.find_elements_by_css_selector(
-                "nav.fixed-top .nav-link")
+                "nav.navbar .nav-link")
             nav_links[ind_link].click()
             WebDriverWait(self.selenium, 10).until(
                 EC.presence_of_element_located(
@@ -38,7 +38,7 @@ class BrowseBaseIndexTests(Browser):
         def assert_link_color(ind_link):
             """ assert active link color """
             nav_links = self.selenium.find_elements_by_css_selector(
-                "nav.fixed-top .nav-link")
+                "nav.navbar .nav-link")
             other_links = []
             for x in range(5):
                 if x == ind_link:
@@ -80,7 +80,7 @@ class BrowseBaseIndexTests(Browser):
         WebDriverWait(self.selenium, 10).until(
             EC.presence_of_element_located((By.CLASS_NAME, "bg-light")))
         nav_links = self.selenium.find_elements_by_css_selector(
-            "nav.fixed-top .nav-link")
+            "nav.navbar .nav-link")
         self.assertEqual(
             nav_links[1].value_of_css_property("color"), "rgb(0, 0, 0)")
         # dark color

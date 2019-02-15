@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
+    'fixture_magic',
     'websiteapp',
     'websiteapp.aboutapp',
     'websiteapp.blogapp',
@@ -130,6 +131,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Media upload
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/uploads/'
 
 INTERNAL_IPS = ['127.0.0.1']
 
