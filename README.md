@@ -1,4 +1,4 @@
-## Strucure of a Django Web Site
+## Strucure of a Django Web Site [![Build Status](https://travis-ci.com/JBthePenguin/DjangoWebSite.svg?branch=master)](https://travis-ci.com/JBthePenguin/DjangoWebSite)
 **A structure of a Web site with a presentation, a portfolio, a blog, a contact page and using the frameworks [Django](https://www.djangoproject.com/), [Bootstrap 4](https://getbootstrap.com/), [jQuery](https://jquery.com/).
 So, to install and use it :**
 ### Create a PostgreSQL database for the application and a new user
