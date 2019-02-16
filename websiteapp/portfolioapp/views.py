@@ -4,7 +4,7 @@ from websiteapp.portfolioapp.models import PortfolioCategory, Project
 
 
 def portfolio(request):
-    """ return the index page """
+    """ return the portfolio page """
     categories = PortfolioCategory.objects.all()
     projects = Project.objects.all().order_by("date").reverse()
     context = {
@@ -21,7 +21,6 @@ def project(request, project_id):
     """ return the page with the project selected """
     project = Project.objects.get(id=project_id)
     context = {
-        "portfolio": "active",
         "theme": settings.THEME,
         "language": settings.LANGUAGE_CODE,
         "project": project,

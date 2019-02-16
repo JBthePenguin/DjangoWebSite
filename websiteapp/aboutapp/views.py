@@ -3,7 +3,7 @@ from websitedjango import settings
 
 
 def about(request):
-    """ return the index page """
+    """ return the about page """
     context = {
         "about": "active",
         "theme": settings.THEME,

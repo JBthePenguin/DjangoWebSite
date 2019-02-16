@@ -1,5 +1,5 @@
 ## Strucure of a Django Web Site
-**A structure of a Web site with a presentation, a portfolio, a blog, a contact page and using the frameworks [Django](https://www.djangoproject.com/), [Bootstrap4](https://getbootstrap.com/), [jQuery](https://jquery.com/).
+**A structure of a Web site with a presentation, a portfolio, a blog, a contact page and using the frameworks [Django](https://www.djangoproject.com/), [Bootstrap 4](https://getbootstrap.com/), [jQuery](https://jquery.com/).
 So, to install and use it :**
 ### Create a PostgreSQL database for the application and a new user
 *!!! maybe you have to install [PostgreSQL](https://www.postgresql.org/) !!!*

@@ -143,3 +143,29 @@ main.bg-light .card .card-body {
 main .card .card-body .btn {
     border-radius: 10px;
 }
+
+main .card .card-body .row {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+main hr {
+    border-top: 2px solid black;
+}
+
+
+ /* FORMS */
+
+form textarea, form input{
+    text-indent:5px;
+}
+
+form textarea {
+    width: 100%;
+}
+
+.bg-dark form textarea, .bg-dark form input {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}

@@ -12,8 +12,11 @@ $(document).ready(function() {
       type: 'GET',
       url: url_theme,
       success: function(data) {
-        location.reload();
-      }
+        window.location.href = window.location.href;
+      },
+      error: function(data) {
+        alert(data);
+      },
     });
   });
 });
@@ -30,8 +33,11 @@ $(document).ready(function() {
       type: 'GET',
       url: url_lang,
       success: function(data) {
-        location.reload();
-      }
+        window.location.href = window.location.href;
+      },
+      error: function(data) {
+        alert(data);
+      },
     });
   });
 });

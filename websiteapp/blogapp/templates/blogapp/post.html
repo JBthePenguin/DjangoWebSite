@@ -1,0 +1,94 @@
+{% extends 'websiteapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<header id="header_post" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+    <div class="container text-center">
+        <h1>
+            {% if language == 'fr' %}{{ post.category.name_fr }}
+            {% else %}{{ post.category.name_en }}
+            {% endif %}
+        </h1>
+        <h2 class="text-danger">
+            {% if language == 'fr' %}{{ post.title_fr }}
+            {% else %}{{ post.title_en }}
+            {% endif %}
+        </h2>
+        <p>
+            {% if language == 'fr' %}{{ post.date|date:"d / m / Y" }}
+            {% else %}{{ post.date|date:"m / d / Y" }}
+            {% endif %}
+        </p>
+        {% if comment_saved is True %}
+            <div class="alert alert-warning text-center mx-auto">
+                {% if language == 'fr' %}Votre commentaire sera ajouté après validation de ma part.
+                {% else %}Your comment will be added after validation on my part.
+                {% endif %} 
+            </div>
+        {% endif %}
+    </div>
+</header>
+<main id="main_post" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card {% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+                    <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text text-left">
+                            {% if language == 'fr' %}{{ post.content_fr|linebreaks }}
+                            {% else %}{{ post.content_en|linebreaks }}
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <h5>
+                            {% if language == 'fr' %}Commentaires
+                            {% else %}Comments
+                            {% endif %}
+                        </h5>
+                        {% if comments.count == 0 %}
+                            <div class="alert alert-warning text-center">
+                                {% if language == 'fr' %}Aucun commentaire pour cet article.
+                                {% else %}No comment for this post.
+                                {% endif %}
+                            </div>
+                        {% else %}
+                            {% for comment in comments %}
+                                <p class="row {% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+                                    <strong class="col-md-3 my-auto text-left">
+                                        {{ comment.author_name}}
+                                    </strong>
+                                    <i class="col-md-6 my-auto">
+                                        {{ comment.text }}
+                                    </i>
+                                    <small class="col-md-3 my-auto text-right">
+                                        {{ comment.date|date:"m/d/Y - H:i" }}
+                                    </small>
+                                </p>
+                            {% endfor %}                   
+                        {% endif %}
+                        <hr align="center" width="100%">
+                        <h5>
+                            {% if language == 'fr' %}Laisser un commentaire
+                            {% else %}Post a comment.                            {% endif %}
+                        </h5>
+                        <form id="comment-form" role="form" action="" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button class="btn btn-danger" type="submit">
+                                {% if language == 'fr' %}Envoyer
+                                {% else %}Send
+                                {% endif %}
+                            </button>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

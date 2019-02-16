@@ -24,10 +24,10 @@ def mentions(request):
 def change_theme(request, theme):
     """ change the color of theme """
     settings.THEME = theme
-    return HttpResponse("OK")
+    return HttpResponse("ok")
 
 
 def change_lang(request, language):
     """ chnge the language """
     settings.LANGUAGE_CODE = language
-    return HttpResponse("OK")
+    return HttpResponse("ok")

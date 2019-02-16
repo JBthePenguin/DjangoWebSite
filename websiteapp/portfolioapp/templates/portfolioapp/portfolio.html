@@ -5,9 +5,7 @@
 {% block content %}
 <header id="header_portfolio" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div class="container text-center">
-        <h1>
-            Portfolio 
-        </h1>
+        <h1>Portfolio</h1>
         <ul>
             {% for category in categories %}
                 <li><h4><a href="#{{ category.id }}" class="text-danger">
@@ -28,35 +26,35 @@
                 {% endif %} 
             </h4>
             <div class="row">
-            {% for project in projects %}
-                {% if project.category == category %}
-                    <div class="col-md-3">
-                        <div class="card {% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %} text-center">
-                            <img class="card-img-top" src="{{ project.image.url }}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    {% if language == 'fr' %}{{ project.title_fr }}
-                                    {% else %}{{ project.title_en }}
-                                    {% endif %}
-                                </h5>
-                                <h6 class="card-subtitle mb-2">
-                                    {% if language == 'fr' %}{{ project.subtitle_fr }}
-                                    {% else %}{{ project.subtitle_en }}
-                                    {% endif %}
-                                </h6>
-                                <p class="card-text">
-                                    {{ project.date|date:"m / Y" }}
-                                </p>
-                                <a href="{% url 'portfolio' %}{{ project.id }}/" class="btn btn-danger">
-                                    {% if language == 'fr' %}Voir les détails
-                                    {% else %}View details
-                                    {% endif %}
-                                </a>
+                {% for project in projects %}
+                    {% if project.category == category %}
+                        <div class="col-md-3">
+                            <div class="card {% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %} text-center">
+                                <img class="card-img-top" src="{{ project.image.url }}" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        {% if language == 'fr' %}{{ project.title_fr }}
+                                        {% else %}{{ project.title_en }}
+                                        {% endif %}
+                                    </h5>
+                                    <h6 class="card-subtitle mb-2">
+                                        {% if language == 'fr' %}{{ project.subtitle_fr }}
+                                        {% else %}{{ project.subtitle_en }}
+                                        {% endif %}
+                                    </h6>
+                                    <p class="card-text">
+                                        {{ project.date|date:"m / Y" }}
+                                    </p>
+                                    <a href="{% url 'portfolio' %}{{ project.id }}/" class="btn btn-danger">
+                                        {% if language == 'fr' %}Voir les détails
+                                        {% else %}View details
+                                        {% endif %}
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     {% endfor %}
