@@ -41,7 +41,8 @@ Create a "superuser" account:
 ```
 **NOW, with your favorite browser, go to this url [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to use the application and [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin) for the admin site where you can manage in:**
 * **portfolio: categories and projects.**
-* **blog: categories, posts and comments**
+* **blog: categories, posts and valid comments**
+* **contact: set message as read**
 
 ### Tests
 The tests use [selenium](https://selenium-python.readthedocs.io/) and maybe you have to install [GreckoWebdriver](https://github.com/mozilla/geckodriver/releases) to use firefox.

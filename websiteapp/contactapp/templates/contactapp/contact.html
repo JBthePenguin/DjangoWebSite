@@ -6,15 +6,44 @@
 <header id="header_contact" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div class="container text-center">
         <h1>Contact<h1>
+        <ul>
+            <li><i class="fa fa-home text-danger"></i>  3 route du Gers, L.A, CALIFORNIA, USA</li>
+            <li><i class="fa fa-envelope text-danger"></i>  email@mail.com</li>
+            <li><i class="fa fa-phone text-danger"></i>  01 23 45 67 89</li>
+        </ul>
+        {% if send_msg is True %}
+            <div class="alert alert-warning text-center mx-auto">
+                {% if language == 'fr' %}Votre message a été envoyé.
+                {% else %}Your message has been sent.
+                {% endif %}
+            </div>
+        {% endif %}
     </div>
 </header>
 <main id="main_contact" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
     <div class="container">
-        <p>
-            {% if language == 'fr' %}Formulaire de contact. 
-            {% else %}Contact form.
-            {% endif %}
-        </p>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card {% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+                    <div class="card-body">
+                        <h5>
+                            {% if language == 'fr' %}Formulaire de contact
+                            {% else %}Contact form
+                            {% endif %}
+                        </h5>
+                        <form id="contact-form" role="form" action="" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button class="btn btn-danger" type="submit">
+                                {% if language == 'fr' %}Envoyer
+                                {% else %}Send
+                                {% endif %}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 {% endblock %}

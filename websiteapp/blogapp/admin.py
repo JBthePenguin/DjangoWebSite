@@ -36,17 +36,11 @@ class PostAdmin(admin.ModelAdmin):
     get_category.short_description = 'Category'
 
 
-class PostModelChoiceField(forms.ModelChoiceField):
-    def label_from_instance(self, obj):
-        return "%s - %s" % (obj.title_en, obj.title_fr)
-
-
 class CommentAdminForm(forms.ModelForm):
-    post = PostModelChoiceField(queryset=Post.objects.all())
 
     class Meta:
-        model = Post
-        fields = "__all__"
+        model = Comment
+        fields = ["valid"]
 
 
 @admin.register(Comment)

@@ -22,6 +22,8 @@ websiteapp/contactapp/__pycache__/
 
 websiteapp/contactapp/migrations/__pycache__/
 
+websiteapp/contactapp/migrations/0*.py
+
 websiteapp/portfolioapp/__pycache__/
 
 websiteapp/portfolioapp/migrations/__pycache__/

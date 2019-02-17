@@ -8,7 +8,7 @@ class BrowseBaseIndexTests(Browser):
     """ Tests for base.html and index.html"""
 
     def test_navbar(self):
-        """ test for nav bar"""
+        """ tests for nav bar"""
         self.selenium.get(self.live_server_url)
         # title
         self.assertEqual(self.selenium.title, "Titre du site")
@@ -72,7 +72,7 @@ class BrowseBaseIndexTests(Browser):
         assert_link_color(4)
 
     def test_footer(self):
-        """ test for footer"""
+        """ tests for footer"""
         self.selenium.get(self.live_server_url)
         # change color of theme
         # light color
@@ -110,7 +110,7 @@ class BrowseBaseIndexTests(Browser):
         self.assertEqual(footer_text.text, "Suivez-moi:")
 
     def test_index(self):
-        """ test for index page"""
+        """ tests for index page"""
         self.selenium.get(self.live_server_url)
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")

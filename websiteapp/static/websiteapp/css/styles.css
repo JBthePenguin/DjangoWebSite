@@ -82,12 +82,17 @@ header.bg-light {
 
 header ul {
     margin-left: -15px;
+    font-size: 20px;
 }
 
 header ul li {
     display: inline-block;
     list-style: none;
     padding-right: 20px;
+}
+
+header .alert {
+    font-size: 15px;
 }
 
 
