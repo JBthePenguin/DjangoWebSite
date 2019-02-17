@@ -1,4 +1,5 @@
-## Strucure of a Django Web Site [![Build Status](https://travis-ci.com/JBthePenguin/DjangoWebSite.svg?branch=master)](https://travis-ci.com/JBthePenguin/DjangoWebSite)
+[![Build Status](https://travis-ci.com/JBthePenguin/DjangoWebSite.svg?branch=master)](https://travis-ci.com/JBthePenguin/DjangoWebSite)
+## Strucure of a Django Web Site
 **A structure of a Web site with a presentation, a portfolio, a blog, a contact page and using the frameworks [Django](https://www.djangoproject.com/), [Bootstrap 4](https://getbootstrap.com/), [jQuery](https://jquery.com/).
 So, to install and use it :**
 ### Create a PostgreSQL database for the application and a new user
@@ -38,7 +39,10 @@ Create a "superuser" account:
 ```shell
 (env)$ python manage.py runserver
 ```
-**NOW, with your favorite browser, go to this url [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to use the application and [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin) for the admin site where you can add categories and projects in portfolio.**
+**NOW, with your favorite browser, go to this url [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to use the application and [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin) for the admin site where you can manage in:**
+* **portfolio: categories and projects.**
+* **blog: categories, posts and comments**
+
 ### Tests
 The tests use [selenium](https://selenium-python.readthedocs.io/) and maybe you have to install [GreckoWebdriver](https://github.com/mozilla/geckodriver/releases) to use firefox.
 During the tests, a temporary database is creating, so you need to update the role of application:

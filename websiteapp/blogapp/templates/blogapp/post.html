@@ -57,17 +57,17 @@
                             </div>
                         {% else %}
                             {% for comment in comments %}
-                                <p class="row {% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+                                <div class="row {% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
                                     <strong class="col-md-3 my-auto text-left">
                                         {{ comment.author_name}}
                                     </strong>
-                                    <i class="col-md-6 my-auto">
-                                        {{ comment.text }}
-                                    </i>
+                                    <div class="col-md-6">
+                                        <i class="my-auto">{{ comment.text|linebreaks }}</i>
+                                    </div>
                                     <small class="col-md-3 my-auto text-right">
                                         {{ comment.date|date:"m/d/Y - H:i" }}
                                     </small>
-                                </p>
+                                </div>
                             {% endfor %}                   
                         {% endif %}
                         <hr align="center" width="100%">

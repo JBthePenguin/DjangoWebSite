@@ -1,0 +1,165 @@
+[
+{
+    "model": "blogapp.blogcategory",
+    "pk": 1,
+    "fields": {
+        "name_en": "Category 1",
+        "name_fr": "Cat\u00e9gorie 1"
+    }
+},
+{
+    "model": "blogapp.blogcategory",
+    "pk": 2,
+    "fields": {
+        "name_en": "Category 2",
+        "name_fr": "Cat\u00e9gorie 2"
+    }
+},
+{
+    "model": "blogapp.post",
+    "pk": 2,
+    "fields": {
+        "category": 2,
+        "image": "blog/jquery.png",
+        "title_en": "Post 2",
+        "title_fr": "Article 2",
+        "content_en": "English!!!!\r\nRestabat ut Caesar post haec properaret accitus et abstergendae causa suspicionis sororem suam, eius uxorem, Constantius ad se tandem desideratam venire multis fictisque blanditiis hortabatur. quae licet ambigeret metuens saepe cruentum, spe tamen quod eum lenire poterit ut germanum profecta, cum Bithyniam introisset, in statione quae Caenos Gallicanos appellatur, absumpta est vi febrium repentina. cuius post obitum maritus contemplans cecidisse fiduciam qua se fultum existimabat, anxia cogitatione, quid moliretur haerebat.",
+        "content_fr": "Fran\u00e7ais!!!!\r\nRestabat ut Caesar post haec properaret accitus et abstergendae causa suspicionis sororem suam, eius uxorem, Constantius ad se tandem desideratam venire multis fictisque blanditiis hortabatur. quae licet ambigeret metuens saepe cruentum, spe tamen quod eum lenire poterit ut germanum profecta, cum Bithyniam introisset, in statione quae Caenos Gallicanos appellatur, absumpta est vi febrium repentina. cuius post obitum maritus contemplans cecidisse fiduciam qua se fultum existimabat, anxia cogitatione, quid moliretur haerebat.",
+        "date": "2018-12-04"
+    }
+},
+{
+    "model": "blogapp.post",
+    "pk": 3,
+    "fields": {
+        "category": 2,
+        "image": "blog/bootstrap.png",
+        "title_en": "Post 3",
+        "title_fr": "Article 3",
+        "content_en": "English!!!!\r\nRestabat ut Caesar post haec properaret accitus et abstergendae causa suspicionis sororem suam, eius uxorem, Constantius ad se tandem desideratam venire multis fictisque blanditiis hortabatur. quae licet ambigeret metuens saepe cruentum, spe tamen quod eum lenire poterit ut germanum profecta, cum Bithyniam introisset, in statione quae Caenos Gallicanos appellatur, absumpta est vi febrium repentina. cuius post obitum maritus contemplans cecidisse fiduciam qua se fultum existimabat, anxia cogitatione, quid moliretur haerebat.",
+        "content_fr": "Fran\u00e7ais!!!!\r\nRestabat ut Caesar post haec properaret accitus et abstergendae causa suspicionis sororem suam, eius uxorem, Constantius ad se tandem desideratam venire multis fictisque blanditiis hortabatur. quae licet ambigeret metuens saepe cruentum, spe tamen quod eum lenire poterit ut germanum profecta, cum Bithyniam introisset, in statione quae Caenos Gallicanos appellatur, absumpta est vi febrium repentina. cuius post obitum maritus contemplans cecidisse fiduciam qua se fultum existimabat, anxia cogitatione, quid moliretur haerebat.",
+        "date": "2019-02-15"
+    }
+},
+{
+    "model": "blogapp.post",
+    "pk": 1,
+    "fields": {
+        "category": 1,
+        "image": "blog/django.png",
+        "title_en": "Post 1",
+        "title_fr": "Article 1",
+        "content_en": "English!!!!\r\nRestabat ut Caesar post haec properaret accitus et abstergendae causa suspicionis sororem suam, eius uxorem, Constantius ad se tandem desideratam venire multis fictisque blanditiis hortabatur. quae licet ambigeret metuens saepe cruentum, spe tamen quod eum lenire poterit ut germanum profecta, cum Bithyniam introisset, in statione quae Caenos Gallicanos appellatur, absumpta est vi febrium repentina. cuius post obitum maritus contemplans cecidisse fiduciam qua se fultum existimabat, anxia cogitatione, quid moliretur haerebat.",
+        "content_fr": "Fran\u00e7ais!!!!\r\nRestabat ut Caesar post haec properaret accitus et abstergendae causa suspicionis sororem suam, eius uxorem, Constantius ad se tandem desideratam venire multis fictisque blanditiis hortabatur. quae licet ambigeret metuens saepe cruentum, spe tamen quod eum lenire poterit ut germanum profecta, cum Bithyniam introisset, in statione quae Caenos Gallicanos appellatur, absumpta est vi febrium repentina. cuius post obitum maritus contemplans cecidisse fiduciam qua se fultum existimabat, anxia cogitatione, quid moliretur haerebat.",
+        "date": "2019-02-01"
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 28,
+    "fields": {
+        "post": 1,
+        "author_name": "test 5",
+        "author_email": "test5@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T21:58:16.374Z",
+        "valid": false
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 27,
+    "fields": {
+        "post": 3,
+        "author_name": "test 5",
+        "author_email": "test5@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T21:45:56.714Z",
+        "valid": false
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 25,
+    "fields": {
+        "post": 1,
+        "author_name": "test 4",
+        "author_email": "test4@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T21:43:22.814Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 23,
+    "fields": {
+        "post": 3,
+        "author_name": "test 4",
+        "author_email": "test4@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T21:33:59.664Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 15,
+    "fields": {
+        "post": 1,
+        "author_name": "test 3",
+        "author_email": "test3@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T21:02:39.648Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 6,
+    "fields": {
+        "post": 2,
+        "author_name": "test 3",
+        "author_email": "test3@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T19:31:24.593Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 5,
+    "fields": {
+        "post": 1,
+        "author_name": "test 2",
+        "author_email": "test2@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T19:30:43.689Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 4,
+    "fields": {
+        "post": 3,
+        "author_name": "test 2",
+        "author_email": "test2@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T18:58:38.590Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 3,
+    "fields": {
+        "post": 1,
+        "author_name": "test 1",
+        "author_email": "test1@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T18:56:46.341Z",
+        "valid": true
+    }
+}
+]

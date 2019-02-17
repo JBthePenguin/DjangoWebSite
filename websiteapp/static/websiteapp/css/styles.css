@@ -147,6 +147,13 @@ main .card .card-body .btn {
 main .card .card-body .row {
     border-radius: 10px;
     padding: 5px;
+    margin: 5px;
+}
+
+main .card .card-body .row p {
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 main hr {
