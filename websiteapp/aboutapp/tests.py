@@ -1,5 +1,7 @@
+import os
 from websiteapp.browser_selenium import Browser
 from websiteapp.aboutapp.models import Service
+from websitedjango.settings import BASE_DIR
 
 
 class BrowseAboutTests(Browser):
@@ -24,9 +26,21 @@ class BrowseAboutTests(Browser):
         skills = self.selenium.find_elements_by_css_selector(
             "#main_about #divskills .card")
         self.assertEqual(len(skills), 3)
-        # services -1
-        Service.objects.get(pk=2).delete()
+        # services +1
+        Service.objects.create(
+            logo=os.path.join(BASE_DIR, "uploads/test.png"),
+            name_en="test",
+            name_fr="test",
+            description_en="test",
+            description_fr="test",
+        )
         self.selenium.get("".join([self.live_server_url, "/about/"]))
         services = self.selenium.find_elements_by_css_selector(
             "#main_about #divservices .card")
-        self.assertEqual(len(services), 3)
+        self.assertEqual(len(services), 5)
+        # services -1
+        Service.objects.get(name_en="test").delete()
+        self.selenium.get("".join([self.live_server_url, "/about/"]))
+        services = self.selenium.find_elements_by_css_selector(
+            "#main_about #divservices .card")
+        self.assertEqual(len(services), 4)

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'fixture_magic',
+    'django_cleanup.apps.CleanupConfig',
     'websiteapp',
     'websiteapp.aboutapp',
     'websiteapp.blogapp',

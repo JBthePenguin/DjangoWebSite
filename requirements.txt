@@ -1,5 +1,7 @@
 django
 
+django-cleanup
+
 django-debug-toolbar
 
 django-fixture-magic
