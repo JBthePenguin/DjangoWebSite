@@ -12,6 +12,8 @@ websiteapp/aboutapp/__pycache__/
 
 websiteapp/aboutapp/migrations/__pycache__/
 
+websiteapp/aboutapp/migrations/0*.py
+
 websiteapp/blogapp/__pycache__/
 
 websiteapp/blogapp/migrations/__pycache__/

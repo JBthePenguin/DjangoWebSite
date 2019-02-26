@@ -16,8 +16,8 @@
             {% endif %}
         </h3>
         <ul>
-            <li><h4><a href="#services" class="text-danger">Services</a></li>
-            <li><h4><a href="#skills" class="text-danger">
+            <li><h4><a href="#divservices" class="text-danger">Services</a></li>
+            <li><h4><a href="#divskills" class="text-danger">
                 {% if language == 'fr' %}Compétences
                 {% else %}Skills
                 {% endif %}
@@ -26,35 +26,57 @@
     </div>
 </header>
 <main id="main_about" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
-    <div id="services" class="container">
+    <div id="divservices" class="container">
         <h4 class="text-danger">Services</h4>
-        <p>
-            <ul>
-                <li>Service 1</li>
-                <li>Service 2</li>
-                <li>Service 3</li>
-            </ul>
-        </p>
+        <div class="row">
+            {% for service in services %}
+                <div class="col-md-3">
+                    <div class="card {% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %} h-100">
+                        <img class="card-img-top" src="{{ service.logo.url }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                {% if language == 'fr' %}{{ service.name_fr }}
+                                {% else %}{{ service.name_en }}
+                                {% endif %}
+                            </h5>
+                            <p class="card-text text-center">
+                                {% if language == 'fr' %}{{ service.description_fr|safe }}
+                                {% else %}{{ service.description_en|safe }}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-    <div id="skills" class="container">
+    <div id="divskills" class="container">
         <h4 class="text-danger">
             {% if language == 'fr' %}Compétences
             {% else %}Skills
             {% endif %}
         </h4>
-        <p>
-            <ul>
-                {% if language == 'fr' %}
-                    <li>Compétence 1</li>
-                    <li>Compétence 2</li>
-                    <li>Compétence 3</li> 
-                {% else %}
-                    <li>Skill 1</li>
-                    <li>Skill 2</li>
-                    <li>Skill 3</li> 
-                {% endif %}
-            </ul>
-        </p>
+        <div class="row">
+            {% for skill in skills %}
+                <div class="col-md-3">
+                    <div class="card {% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %} h-100">
+                        <img class="card-img-top" src="{{ skill.logo.url }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                {% if language == 'fr' %}{{ skill.name_fr }}
+                                {% else %}{{ skill.name_en }}
+                                {% endif %}
+                            </h5>
+                            <p class="card-text text-center">
+                                {% if language == 'fr' %}{{ skill.description_fr|safe }}
+                                {% else %}{{ skill.description_en|safe }}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>    
 </main>
 {% endblock %}

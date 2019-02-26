@@ -38,8 +38,8 @@
                     <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text text-left">
-                            {% if language == 'fr' %}{{ post.content_fr|linebreaks }}
-                            {% else %}{{ post.content_en|linebreaks }}
+                            {% if language == 'fr' %}{{ post.content_fr|safe }}
+                            {% else %}{{ post.content_en|safe }}
                             {% endif %}
                         </p>
                     </div>

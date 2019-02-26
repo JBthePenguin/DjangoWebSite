@@ -14,7 +14,7 @@ class Post(models.Model):
     title_fr = models.CharField(db_index=True, max_length=255)
     content_en = models.TextField()
     content_fr = models.TextField()
-    date = models.DateField()
+    date = models.DateField(auto_now_add=True)
 
 
 class Comment(models.Model):

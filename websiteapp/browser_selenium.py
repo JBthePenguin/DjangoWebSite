@@ -5,7 +5,11 @@ from selenium.webdriver.firefox.webdriver import WebDriver
 class Browser(StaticLiveServerTestCase):
     """ Tests for the browsing"""
     port = 12345
-    fixtures = ["portfolio_fixture.json", "blog_fixture.json"]
+    fixtures = [
+        "about_fixture.json",
+        "portfolio_fixture.json",
+        "blog_fixture.json"
+    ]
 
     @classmethod
     def setUpClass(cls):

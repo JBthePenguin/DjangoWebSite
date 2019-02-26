@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.com/JBthePenguin/DjangoWebSite.svg?branch=master)](https://travis-ci.com/JBthePenguin/DjangoWebSite)
-## Strucure of a Django Web Site
-**A structure of a Web site with a presentation, a portfolio, a blog, a contact page and using the frameworks [Django](https://www.djangoproject.com/), [Bootstrap 4](https://getbootstrap.com/), [jQuery](https://jquery.com/).
+[![Build Status](https://travis-ci.com/JBthePenguin/DjangoWebSite.svg?branch=master)](https://travis-ci.com/JBthePenguin/DjangoWebSite) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
+## Structure for a Django Web Site
+**A structure for a Web site with a presentation, a portfolio, a blog and a contact page. It's using the frameworks [Django](https://www.djangoproject.com/), [Bootstrap 4](https://getbootstrap.com/), [jQuery](https://jquery.com/).
 So, to install and use it :**
 ### Create a PostgreSQL database for the application and a new user
 *!!! maybe you have to install [PostgreSQL](https://www.postgresql.org/) !!!*
@@ -40,6 +40,7 @@ Create a "superuser" account:
 (env)$ python manage.py runserver
 ```
 **NOW, with your favorite browser, go to this url [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to use the application and [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin) for the admin site where you can manage in:**
+* **about: services and skills.**
 * **portfolio: categories and projects.**
 * **blog: categories, posts and valid comments**
 * **contact: set message as read**

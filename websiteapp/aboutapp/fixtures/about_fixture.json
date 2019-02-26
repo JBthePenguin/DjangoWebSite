@@ -1,0 +1,79 @@
+[
+{
+    "model": "aboutapp.service",
+    "pk": 4,
+    "fields": {
+        "logo": "about/service/57._Exchange.png",
+        "name_en": "Maintenance",
+        "name_fr": "Maintenance",
+        "description_en": "Management and support.",
+        "description_fr": "Gestion et accompagnement."
+    }
+},
+{
+    "model": "aboutapp.service",
+    "pk": 3,
+    "fields": {
+        "logo": "about/service/43._Globe.png",
+        "name_en": "Production",
+        "name_fr": "Production",
+        "description_en": "Exploitation and delivery.",
+        "description_fr": "Exploitation et livraison."
+    }
+},
+{
+    "model": "aboutapp.service",
+    "pk": 2,
+    "fields": {
+        "logo": "about/service/26._Settings.png",
+        "name_en": "Development",
+        "name_fr": "D\u00e9veloppement",
+        "description_en": "Create or expand the scope of an application.",
+        "description_fr": "Cr\u00e9er ou \u00e9largir le p\u00e9rim\u00e8tre d'une application."
+    }
+},
+{
+    "model": "aboutapp.service",
+    "pk": 1,
+    "fields": {
+        "logo": "about/service/78._Tablet.png",
+        "name_en": "Design",
+        "name_fr": "Conception",
+        "description_en": "Design a web or desktop application.",
+        "description_fr": "Concevoir une application web ou bureau."
+    }
+},
+{
+    "model": "aboutapp.skill",
+    "pk": 3,
+    "fields": {
+        "logo": "about/skill/51._Package.png",
+        "name_en": "Softwares",
+        "name_fr": "Logiciels",
+        "description_en": "<ul>\r\n<li>Libre Office</li>\r\n<li>Gimp</li>\r\n<li>StarUML</li>\r\n<li>SQL architect</li>\r\n</ul>",
+        "description_fr": "<ul>\r\n<li>Libre Office</li>\r\n<li>Gimp</li>\r\n<li>StarUML</li>\r\n<li>SQL architect</li>\r\n</ul>"
+    }
+},
+{
+    "model": "aboutapp.skill",
+    "pk": 2,
+    "fields": {
+        "logo": "about/skill/35._Layers.png",
+        "name_en": "Languages",
+        "name_fr": "Langages",
+        "description_en": "<ul>\r\n<li>HTML</li>\r\n<li>CSS</li>\r\n<li>JS</li>\r\n<li>Python</li>\r\n<li>SQL</li>\r\n</ul>",
+        "description_fr": "<ul>\r\n<li>HTML</li>\r\n<li>CSS</li>\r\n<li>JS</li>\r\n<li>Python</li>\r\n<li>SQL</li>\r\n</ul>"
+    }
+},
+{
+    "model": "aboutapp.skill",
+    "pk": 1,
+    "fields": {
+        "logo": "about/skill/45._Award.png",
+        "name_en": "Fields of competence",
+        "name_fr": "Domaines de comp\u00e9tences",
+        "description_en": "<ul>\r\n<li>Project management</li>\r\n<li>Graphic design</li>\r\n<li>Specific application</li>\r\n</ul>",
+        "description_fr": "<ul>\r\n<li>Gestion de projet</li>\r\n<li>Conception graphique</li>\r\n<li>Application sp\u00e9cifique</li>\r\n</ul>"
+    }
+}
+]

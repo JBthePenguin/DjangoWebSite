@@ -50,7 +50,7 @@ class CommentAdmin(admin.ModelAdmin):
         'author_name', 'author_email', 'post__title_fr',
         'post__title_en', 'valid')
     list_display = (
-        'valid', 'get_post', 'author_name', 'author_email', 'date')
+        'valid', 'get_post', 'author_name', 'author_email', 'text', 'date')
 
     def get_post(self, obj):
         return "%s - %s" % (obj.post.title_en, obj.post.title_fr)
