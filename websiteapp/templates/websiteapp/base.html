@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang={{ language }}>
+
+<html lang="{{ lang }}">
 
 <head>
     <meta charset="utf-8">
@@ -13,9 +14,7 @@
     <link rel="icon" href="{% static 'websiteapp/img/favicon.png' %}" type="image/x-icon" />
     
     <title>
-        {% if language == 'fr' %}Titre du site
-        {% else %} Site's title
-        {% endif %}
+        {{ title }}
     </title>    
     
     <!-- Bootstrap CSS -->
@@ -26,90 +25,60 @@
     <!-- custom styles -->
     <link href="{% static 'websiteapp/css/styles.css' %}" rel="stylesheet"> 
 </head>
-<body class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
+
+<body class="{{ bg_class }}">
+
     <!-- NAVBAR -->
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg{% if theme == 'dark' %} navbar-dark bg-dark{% else %} navbar-light bg-light{% endif %}">
-        <a class="navbar-brand" href="#">
-            <img src="http://placehold.it/150x50?text=Logo" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="container">
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item {{ index }}">
-                        <a class="nav-link" href="{% url 'index' %}"><i class="fa fa-home"></i></a>
+    {% include 'websiteapp/navbar.html' %}
+    <!-- -->    
+
+    <!-- Header -->
+    <header id="header_{{ id }}" class="{{ bg_class }} container-fluid text-center">
+            <h1 class="text-danger">
+                {{ titles.0 }}
+            </h1>
+            <h3>
+                {{ titles.1|linebreaks }}
+            </h3>
+            <ul class="list-unstyled">
+                {% for item in  list_items %}
+                    <li>
+                        <h4>
+                            <a href="#{{ item }}" class="text-danger">
+                                {{ item }}
+                            </a>
+                        </h4>
                     </li>
-                    <li class="nav-item {{ about }}">
-                        <a class="nav-link" href="{% url 'about' %}">
-                            {% if language == 'fr' %}&Agrave; propos
-                            {% else %} About
-                            {% endif %}
-                        </a>
-                    </li>
-                    <li class="nav-item {{ portfolio }}">
-                        <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
-                    </li>
-                    <li class="nav-item {{ blog }}">
-                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-                    </li>
-                    <li class="nav-item {{ contact }}">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+                {% endfor %}    
+            </ul>
+    </header>
     <!-- -->
-    {% block content %}{% endblock %}
-    <!-- Footer -->
-    <footer class="container-fluid{% if theme == 'dark' %} bg-dark{% else %} bg-light{% endif%}">
-        <div class="row">
-            <div class="col-lg-3 text-center col-xs-12">
-                <i>
-                    {% if language == 'fr' %}Suivez-moi: 
-                    {% else %}Follow me: 
-                    {% endif %}
-                </i><a href="https://github.com/JBthePenguin/" onclick="window.open(this.href);  return false;"><i class="fa fa-github"></i></a> <a href="https://twitter.com/JBthePenguin/" onclick="window.open(this.href);  return false;"><i class="fa fa-twitter text-info"></i></a>  <a href="https://www.linkedin.com/in/jean-baptiste-labaty-a5b084155/" onclick="window.open(this.href);  return false;"><i class="fa fa-linkedin text-primary"></i></a>
-            </div>
-            <div class="col-lg-2 text-center col-6">
-                <i>
-                    {% if language == 'fr' %}Thème:
-                    {% else %}Theme: 
-                    {% endif %} 
-                </i><input id="theme-check" type="checkbox"{% if theme == 'dark' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="light" data-offstyle="dark" data-size="xs">
-            </div>
-            <div class="col-lg-2 text-center col-6">
-                <i> 
-                    {% if language == 'fr' %}Langue: 
-                    {% else %}Language
-                    {% endif %}
-                </i><input id="lang-check" type="checkbox"{% if language == 'fr' %} checked{% else %} unchecked{% endif %} data-toggle="toggle" data-on="Fr" data-off="En" data-onstyle="{% if theme == 'dark' %}light{% else %}dark{% endif %}" data-offstyle="{% if theme == 'dark' %}light{% else %}dark{% endif %}" data-size="xs">
-            </div>
-            <div class="col-lg-2 text-center col-6">
-                <small><a href="{% url 'mentions' %}" class="text-danger">
-                    {% if language == 'fr' %}Mentions légales
-                    {% else %}Legal notices
-                    {% endif %}
-                </a></small>
-            </div>
-            <div class="col-lg-2 text-center col-6">
-                <small>©2019 NoRightReserved</small>
-            </div>
+
+    <!-- Main -->
+    <main id="main_{{ id }}" class="container-fluid">
+        <div class="row ">
+            {% block main %}{% endblock %}
         </div>
-    </footer>      
-    <!--  -->
+    </main>
+    <!-- -->
+
+    <!-- Footer -->
+    {% include 'websiteapp/footer.html' %}
+    <!-- -->
+
+    <!-- Scripts -->
     <!-- JQuery -->
     <script src="{% static 'websiteapp/jquery/jquery-3.3.1.slim.min.js' %}"></script>
     <script src="{% static 'websiteapp/jquery/jquery-3.3.1.min.js' %}"></script>
+    
     <!-- Bootstrap JavaScript -->
     <script src="{% static 'websiteapp/bootstrap/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'websiteapp/bootstrap/js/bootstrap4-toggle.min.js' %}"></script>
     <script src="{% static 'websiteapp/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    
     <!-- Custom script -->
     <script src="{% static 'websiteapp/js/script.js' %}"></script>
+    <!-- -->
 </body>
 
 </html>

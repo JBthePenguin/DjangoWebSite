@@ -48,7 +48,7 @@ class BrowsePortfolioTests(Browser):
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")
         self.assertEqual("Catégorie 1", header_title.text)
-        project_title = self.selenium.find_element_by_tag_name("h2")
+        project_title = self.selenium.find_element_by_tag_name("h3")
         self.assertEqual("Projet 4", project_title.text)
         # main
         main_title = self.selenium.find_element_by_tag_name("h5")

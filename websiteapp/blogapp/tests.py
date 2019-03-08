@@ -46,7 +46,7 @@ class BrowseBlogTests(Browser):
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")
         self.assertEqual("Catégorie 1", header_title.text)
-        project_title = self.selenium.find_element_by_tag_name("h2")
+        project_title = self.selenium.find_element_by_tag_name("h3")
         self.assertEqual("Article 1", project_title.text)
         # main
         card_bodies = self.selenium.find_elements_by_css_selector(
@@ -67,10 +67,10 @@ class BrowseBlogTests(Browser):
         WebDriverWait(self.selenium, 10).until(
             EC.presence_of_element_located((By.CLASS_NAME, "alert")))
         message = self.selenium.find_element_by_css_selector(
-            "#header_post .container div")
+            "#main_post .card .card-body .alert")
         self.assertEqual(
             message.text,
-            "Votre commentaire sera ajouté après validation de ma part.")
+            "Votre commentaire sera ajouté dès que je l'aurai validé.")
         # valid the comment
         comment = Comment.objects.get(author_name="test 6")
         comment.valid = True

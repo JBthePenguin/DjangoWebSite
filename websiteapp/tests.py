@@ -82,7 +82,7 @@ class BrowseBaseIndexTests(Browser):
         nav_links = self.selenium.find_elements_by_css_selector(
             "nav.navbar .nav-link")
         self.assertEqual(
-            nav_links[1].value_of_css_property("color"), "rgb(0, 0, 0)")
+            nav_links[1].value_of_css_property("color"), "rgba(0, 0, 0, 0.5)")
         # dark color
         self.selenium.find_element_by_css_selector("footer .toggle").click()
         WebDriverWait(self.selenium, 10).until(

@@ -1,66 +1,49 @@
 {% extends 'websiteapp/base.html' %}
-
 {% load static %}
 
-{% block content %}
-<header id="header_blog" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
-    <div class="container text-center">
-        <h1>Blog</h1>
-        <ul>
-            {% for category in categories %}
-                <li><h4><a href="#{{ category.id }}" class="text-danger">
-                {% if language == 'fr' %}{{ category.name_fr }}
-                {% else %}{{ category.name_en }}
-                {% endif %}
-                </a></h4></li>
-            {% endfor %}
-        </ul>
-    </div>
-</header>
-<main id="main_blog" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
-    {% for category in categories %}
-        <div id="{{ category.id }}" class="container ">
-            <h4 class="text-danger text-center">
-                {% if language == 'fr' %}{{ category.name_fr }}
-                {% else %}{{ category.name_en }}
-                {% endif %} 
-            </h4>
-            <div class="row">
-                {% for post in posts %}
-                    {% if post.category == category %}
-                        <div class="col-md-6">
-                            <div class="card {% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
-                                <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">
-                                        {% if language == 'fr' %}{{ post.title_fr }}
-                                        {% else %}{{ post.title_en }}
-                                        {% endif %}
-                                    </h5>
-                                    <h6 class="card-subtitle mb-2 text-center">
-                                        {% if language == 'fr' %}{{ post.date|date:"d / m / Y" }}
-                                        {% else %}{{ post.date|date:"m / d / Y" }}
-                                        {% endif %}
-                                    </h6>
-                                    <p class="card-text text-left">
-                                        {% if language == 'fr' %}{{ post.content_fr|safe|truncatechars:200 }}
-                                        {% else %}{{ post.content_en|safe|truncatechars:200 }}
-                                        {% endif %}
-                                    </p>
-                                    <div class="text-center">
-                                        <a href="{% url 'blog' %}{{ post.id }}/" class="btn btn-danger">
-                                            {% if language == 'fr' %}Lire la suite
-                                            {% else %}Read more
-                                            {% endif %}
-                                        </a>
-                                    </div>
+<!-- main -->
+{% block main %}
+{% for category in categories %}
+    <!-- Category -->
+    <div id="{{ category.name }}" class="container">
+        <h4 class="text-danger text-center">
+            {{ category.name }}
+        </h4>
+        <div class="row">
+            <!-- Posts -->
+            {% for post in posts %}
+                {% if post.category == category %}
+                    <!-- Post -->
+                    <div class="col-md-6">
+                        <div class="card {{ bg_class }}">
+                            <!-- Image -->
+                            <img class="card-img-top w-75 mx-auto" src="{{ post.image.url }}" alt="Card image cap">
+                            <div class="card-body">
+                                <!-- Title -->
+                                <h5 class="card-title text-center">
+                                    {{ post.title }}
+                                </h5>
+                                <!-- Date -->
+                                <h6 class="card-subtitle mb-2 text-center">
+                                    {{ post.date|date:"j F Y" }}
+                                </h6>
+                                <!-- Content -->
+                                <p class="card-text text-left">
+                                    {{ post.content|safe|truncatechars:200 }}
+                                </p>
+                                <!-- Button Read more -->
+                                <div class="text-center">
+                                    <a href="{% url 'blog' %}{{ post.id }}/" class="btn btn-danger">
+                                        {{ btn_card_text }}
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
-    {% endfor %}
-</main>
+    </div>
+{% endfor %}
 {% endblock %}
+<!-- -->

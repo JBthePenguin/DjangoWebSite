@@ -2,63 +2,44 @@
 
 {% load static %}
 
-{% block content %}
-<header id="header_index" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
-    <div class="container text-center">
-        <h1>
-            {% if language == 'fr' %}Titre du site
-            {% else %}Site's title
-            {% endif %}
-        </h1>
-        <h3>
-            {% if language == 'fr' %}La phrase d'accroche mettant en avant le service proposé.
-            {% else %}The pickup line highlighting the proposed service.
-            {% endif %}
-        </h3> 
-    </div>
-</header>
-<main id="main_index" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
-    <div class="container">
-        <a href="{% url 'about' %}" class="text-danger"><h4>
-            {% if language == 'fr' %}&Agrave; propos 
-            {% else %}About
-            {% endif %}
-        </h4></a>
-        <p>
-            {% if language == 'fr' %}La description du responsable du site (entreprise, artisan, blogueur, ...).
-            {% else %}The description of the site's manager (company, freelancer, blogger, ...).
-            {% endif %} 
-        </p>
-    </div>
-    <div class="container">
-        <a href="{% url 'portfolio' %}" class="text-danger"><h4>
-            Portfolio
-        </h4></a>
-        <p>
-            {% if language == 'fr' %}La présentation des travaux du responsable du site (entreprise, artisan, blogueur, ...).
-            {% else %}The presentation of the works of the site's manager (company, freelancer, blogger, ...).
-            {% endif %} 
-        </p>
-    </div>
-    <div class="container">
-        <a href="{% url 'blog' %}" class="text-danger"><h4>
-            Blog
-        </h4></a>
-        <p>
-            {% if language == 'fr' %}Le blog écrit par le responsable du site (entreprise, artisan, blogueur, ...).
-            {% else %}The blog written by the site's manager (company, freelancer, blogger, ...).
-            {% endif %} 
-        </p>
-    </div>
-    <div class="container">
-        <a href="{% url 'contact' %}" class="text-danger"><h4>
-            Contact
-        </h4></a>
-        <p>
-            {% if language == 'fr' %}Le formulaire pour envoyer un message au responsable du site (entreprise, artisan, blogueur, ...).
-            {% else %}The form to send a message to the site's manager (company, freelancer, blogger, ...).
-            {% endif %} 
-        </p>
-    </div>
-</main>
+<!-- main -->
+{% block main %}
+<!-- Links -->
+<!-- About -->
+<a href="{% url 'about' %}" class="btn {{ btn_class }} col-md-8 mx-auto text-center" role="button">
+    <h4  class="text-danger">
+        {{ navbar_items.0 }}
+    </h4>
+    <p>
+        {{ main_texts.0 }}
+    </p>
+</a>
+<!-- Portfolio -->
+<a href="{% url 'portfolio' %}" class="btn {{ btn_class }} col-md-8 mx-auto" role="button">
+    <h4 class="text-danger">
+        {{ navbar_items.1 }}
+    </h4>
+    <p>
+        {{ main_texts.1 }}
+    </p>
+</a>
+<!-- Blog -->
+<a href="{% url 'blog' %}"  class="btn {{ btn_class }} col-md-8 mx-auto" role="button">
+    <h4 class="text-danger">
+        {{ navbar_items.2 }}
+    </h4>
+    <p>
+        {{ main_texts.2 }}
+    </p>
+</a>
+<!-- Contact -->
+<a href="{% url 'contact' %}"  class="btn {{ btn_class }} col-md-8 mx-auto" role="button">
+    <h4 class="text-danger">
+        {{ navbar_items.3 }}
+    </h4>
+    <p>
+        {{ main_texts.3 }} 
+    </p>
+</a>
 {% endblock %}
+<!-- -->

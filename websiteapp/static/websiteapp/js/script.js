@@ -1,7 +1,7 @@
 // FOOTER
-
-// Theme
+// Check buttons
 $(document).ready(function() {
+  // Theme
   $("#theme-check").change(function() {
     if(this.checked) {
         url_theme = "/change_theme/dark/";
@@ -12,17 +12,19 @@ $(document).ready(function() {
       type: 'GET',
       url: url_theme,
       success: function(data) {
-        window.location.href = window.location.href;
+        if(location.href.includes("#")) {
+          url = location.href.split('#')[0];
+          window.location.href = window.url;
+        } else {
+          window.location.href = window.location.href;
+        }
       },
       error: function(data) {
         alert(data);
       },
     });
   });
-});
-
-// Language
-$(document).ready(function() {
+  // Language
   $("#lang-check").change(function() {
     if(this.checked) {
         url_lang = "/change_lang/fr/";
@@ -33,7 +35,12 @@ $(document).ready(function() {
       type: 'GET',
       url: url_lang,
       success: function(data) {
-        window.location.href = window.location.href;
+        if(location.href.includes("#")) {
+          url = location.href.split('#')[0];
+          window.location.href = window.url;
+        } else {
+          window.location.href = window.location.href;
+        }
       },
       error: function(data) {
         alert(data);

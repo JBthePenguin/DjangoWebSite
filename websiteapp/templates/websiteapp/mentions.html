@@ -2,23 +2,10 @@
 
 {% load static %}
 
-{% block content %}
-<header id="header_mentions" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
-	<div class="container text-center">
-		<h1>
-    		{% if language == 'fr' %}Mentions légales. 
-    		{% else %}Legal notices.
-    		{% endif %}
-    	</h1>
-    </div>
-</header>
-<main id="main_mentions" class="{% if theme == 'dark' %}bg-dark{% else %}bg-light{% endif %}">
-	<div class="container">
-		<p>
-    		{% if language == 'fr' %}Ici les mentions 
-    		{% else %}Here the notices. 
-    		{% endif %}
-    	</p>
-    </div>
-</main>
+<!-- main -->
+{% block main %}
+<p class="col-md-8 mx-auto">
+    {{ main_text }}
+</p>
 {% endblock %}
+<!-- -->

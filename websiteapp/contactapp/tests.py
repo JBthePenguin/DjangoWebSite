@@ -14,7 +14,7 @@ class BrowseContactTests(Browser):
         header_title = self.selenium.find_element_by_tag_name("h1")
         self.assertEqual("Contact", header_title.text)
         contact_items = self.selenium.find_elements_by_css_selector(
-            "#header_contact li")
+            "#main_contact li")
         self.assertEqual(len(contact_items), 3)
         # main
         main_title = self.selenium.find_element_by_tag_name("h5")
@@ -29,7 +29,7 @@ class BrowseContactTests(Browser):
         WebDriverWait(self.selenium, 10).until(
             EC.presence_of_element_located((By.CLASS_NAME, "alert")))
         message = self.selenium.find_element_by_css_selector(
-            "#header_contact .container div")
+            "#main_contact .alert")
         self.assertEqual(message.text, "Votre message a été envoyé.")
         message = Message.objects.get(contact_name="test 6")
         self.assertEqual(message.subject, "subject 1")

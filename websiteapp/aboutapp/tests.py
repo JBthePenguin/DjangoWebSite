@@ -20,11 +20,11 @@ class BrowseAboutTests(Browser):
         self.assertEqual(len(divs), 2)
         # services
         services = self.selenium.find_elements_by_css_selector(
-            "#main_about #divservices .card")
+            "#main_about #Services .card")
         self.assertEqual(len(services), 4)
         # skills
         skills = self.selenium.find_elements_by_css_selector(
-            "#main_about #divskills .card")
+            "#main_about #Compétences .card")
         self.assertEqual(len(skills), 3)
         # services +1
         Service.objects.create(
@@ -36,11 +36,11 @@ class BrowseAboutTests(Browser):
         )
         self.selenium.get("".join([self.live_server_url, "/about/"]))
         services = self.selenium.find_elements_by_css_selector(
-            "#main_about #divservices .card")
+            "#main_about #Services .card")
         self.assertEqual(len(services), 5)
         # services -1
         Service.objects.get(name_en="test").delete()
         self.selenium.get("".join([self.live_server_url, "/about/"]))
         services = self.selenium.find_elements_by_css_selector(
-            "#main_about #divservices .card")
+            "#main_about #Services .card")
         self.assertEqual(len(services), 4)

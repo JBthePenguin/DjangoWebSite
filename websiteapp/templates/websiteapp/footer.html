@@ -1,0 +1,55 @@
+<!-- Footer -->
+<footer class="page-footer {{ bg_class }}">
+    <div class="container-fluid text-center text-md-left">
+        <div class="row  text-center">
+            <!-- Follow me -->
+            <div class="col-md-4 mx-auto">
+                <ul class="list-unstyled list-inline">
+                    <i>
+                        {{ footer_items.0 }}
+                    </i>
+                    <li class="list-inline-item">
+                        <a href="https://github.com/JBthePenguin/" onclick="window.open(this.href);  return false;">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/JBthePenguin/" onclick="window.open(this.href);  return false;">
+                            <i class="fa fa-twitter text-info"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/jean-baptiste-labaty-a5b084155/" onclick="window.open(this.href);  return false;">
+                            <i class="fa fa-linkedin text-primary"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Theme -->
+            <div class="col-md-4 col-6 mx-auto">
+                <i>
+                    {{ footer_items.1 }}
+                </i>
+                <input id="theme-check" type="checkbox" {{ btn_theme }} data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="light" data-offstyle="dark" data-size="xs">
+            </div>
+            <!-- Language -->
+            <div class="col-md-4 col-6 mx-auto">
+                <i> 
+                    {{ footer_items.2 }}
+                </i>
+                <input id="lang-check" type="checkbox" {{ btn_lang }} data-toggle="toggle" data-on="Fr" data-off="En" data-onstyle="{{ btn_lang_style }}" data-offstyle="{{ btn_lang_style }}" data-size="xs">
+            </div>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        <a href="{% url 'mentions' %}" class="text-danger">
+            {{ footer_items.3 }}
+        </a>
+        <i> ©2019 NoRightReserved.</i>
+        <a href="demostructuredjango.herokuapp.com" class="text-danger">
+            DemoStructureDjango.herokuapp.com
+        </a>
+    </div>
+</footer>      
+<!--  -->

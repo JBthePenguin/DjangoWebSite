@@ -4,6 +4,7 @@ from django.db import models
 class BlogCategory(models.Model):
     name_en = models.CharField(db_index=True, max_length=255)
     name_fr = models.CharField(db_index=True, max_length=255)
+    name = models.CharField(max_length=255, default='')
 
 
 class Post(models.Model):
@@ -12,8 +13,10 @@ class Post(models.Model):
     image = models.ImageField(upload_to='blog', default='')
     title_en = models.CharField(db_index=True, max_length=255)
     title_fr = models.CharField(db_index=True, max_length=255)
+    title = models.CharField(max_length=255, default='')
     content_en = models.TextField()
     content_fr = models.TextField()
+    content = models.TextField(default='')
     date = models.DateField(auto_now_add=True)
 
 
