@@ -1,0 +1,268 @@
+[
+{
+    "model": "blogapp.blogcategory",
+    "pk": 2,
+    "fields": {
+        "link_name": "frontend",
+        "name_en": "Front-End",
+        "name_fr": "Front-End",
+        "position": 0
+    }
+},
+{
+    "model": "blogapp.blogcategory",
+    "pk": 1,
+    "fields": {
+        "link_name": "backend",
+        "name_en": "Back-End",
+        "name_fr": "Back-End",
+        "position": 1
+    }
+},
+{
+    "model": "blogapp.post",
+    "pk": 2,
+    "fields": {
+        "category": 2,
+        "link_name": "jquery",
+        "image": "blog/jquery.png",
+        "title_en": "jQuery",
+        "title_fr": "jQuery",
+        "content_en": "<p><b>jQuery</b> is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. It is free, open-source software using the permissive MIT License. Web analysis (from 2017) indicates that it is the most widely deployed JavaScript library by a large margin.</p>\r\n\r\n<p>jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. jQuery also provides capabilities for developers to create plug-ins on top of the JavaScript library. This enables developers to create abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets. The modular approach to the jQuery library allows the creation of powerful dynamic web pages and Web applications.</p>\r\n\r\n<p>The set of jQuery core features\u2014DOM element selections, traversal and manipulation\u2014enabled by its selector engine (named \"Sizzle\" from v1.3), created a new \"programming style\", fusing algorithms and DOM data structures. This style influenced the architecture of other JavaScript frameworks like YUI v3 and Dojo, later stimulating the creation of the standard Selectors API.</p>\r\n\r\n<p>Microsoft and Nokia bundle jQuery on their platforms. Microsoft includes it with Visual Studio for use within Microsoft's ASP.NET AJAX and ASP.NET MVC frameworks while Nokia has integrated it into the Web Run-Time widget development platform.</p>",
+        "content_fr": "<p><b>jQuery</b> est une biblioth\u00e8que JavaScript libre et multiplateforme cr\u00e9\u00e9e pour faciliter l'\u00e9criture de scripts c\u00f4t\u00e9 client dans le code HTML des pages web. La premi\u00e8re version est lanc\u00e9e en janvier 2006 par John Resig.</p>\r\n\r\n<p>La biblioth\u00e8que contient notamment les fonctionnalit\u00e9s suivantes :\r\n<ul>\r\n    <li>parcours et modification du DOM (y compris le support des s\u00e9lecteurs CSS 1 \u00e0 3 et un support basique de XPath) ;</li>\r\n    <li>\u00e9v\u00e9nements ;</li>\r\n    <li>effets visuels et animations ;</li>\r\n    <li>manipulations des feuilles de style en cascade (ajout/suppression des classes, d'attributs\u2026) ;</li>\r\n    <li>Ajax ;</li>\r\n    <li>plugins ;</li>\r\n    <li>Utilitaires (version du navigateur web\u2026).</li>\r\n</ul></p>\r\n\r\n<p>Depuis sa cr\u00e9ation en 2006 et notamment \u00e0 cause de la complexification croissante des interfaces Web, jQuery a connu un large succ\u00e8s aupr\u00e8s des d\u00e9veloppeurs Web et son apprentissage est aujourd'hui un des fondamentaux de la formation aux technologies du Web. Il est \u00e0 l'heure actuelle la librairie front-end la plus utilis\u00e9e au monde (plus de la moiti\u00e9 des sites Internet en ligne int\u00e8grent jQuery).</p>",
+        "date": "2018-12-04"
+    }
+},
+{
+    "model": "blogapp.post",
+    "pk": 3,
+    "fields": {
+        "category": 2,
+        "link_name": "bootstrap",
+        "image": "blog/bootstrap.png",
+        "title_en": "Bootstrap",
+        "title_fr": "Bootstrap",
+        "content_en": "<p><b>Bootstrap</b> is a free and open-source front-end Web framework. It contains HTML and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. Unlike many earlier web frameworks, it concerns itself with front-end development only.</p>\r\n\r\n<p>Bootstrap is the second-most-starred project on GitHub, with more than 131,000 stars.</p>",
+        "content_fr": "<p><b>Bootstrap</b> est une collection d'outils utiles \u00e0 la cr\u00e9ation du design (graphisme, animation et interactions avec la page dans le navigateur, etc.) de sites et d'applications web. C'est un ensemble qui contient des codes HTML et CSS, des formulaires, boutons, outils de navigation et autres \u00e9l\u00e9ments interactifs, ainsi que des extensions JavaScript en option. C'est l'un des projets les plus populaires sur la plate-forme de gestion de d\u00e9veloppement GitHub.</p>",
+        "date": "2019-02-15"
+    }
+},
+{
+    "model": "blogapp.post",
+    "pk": 1,
+    "fields": {
+        "category": 1,
+        "link_name": "django",
+        "image": "blog/django.png",
+        "title_en": "Django",
+        "title_fr": "Django",
+        "content_en": "<p><b>Django</b>  is a Python-based free and open-source web framework, which follows the model-view-template (MVT) architectural pattern. It is maintained by the Django Software Foundation (DSF), an independent organization established as a 501(c)(3) non-profit.</p>\r\n\r\n<p>Django's primary goal is to ease the creation of complex, database-driven websites. The framework emphasizes reusability and \"pluggability\" of components, less code, low coupling, rapid development, and the principle of don't repeat yourself. Python is used throughout, even for settings files and data models. Django also provides an optional administrative create, read, update and delete interface that is generated dynamically through introspection and configured via admin models.</p>\r\n\r\n<p>Some well-known sites that use Django include the Public Broadcasting Service, Instagram, Mozilla, The Washington Times, Disqus, Bitbucket, and Nextdoor. It was used on Pinterest, but later the site moved to a framework built over Flask.</p>",
+        "content_fr": "<p><b>Django</b> est un cadre de d\u00e9veloppement web open source en Python. Il a pour but de rendre le d\u00e9veloppement web 2.0 simple et rapide. Pour cette raison, le projet a pour slogan \u00ab Le framework web pour les perfectionnistes sous pression \u00bb. D\u00e9velopp\u00e9 en 2003 pour le journal local de Lawrence (Kansas), Django a \u00e9t\u00e9 publi\u00e9 sous licence BSD \u00e0 partir de juillet 2005.</p>\r\n\r\n<p>Depuis juin 2008, la Django Software Foundation s'occupe du d\u00e9veloppement et de la promotion du cadre. En plus de cette promotion r\u00e9guli\u00e8re, des conf\u00e9rences entre d\u00e9veloppeurs et utilisateurs de Django sont organis\u00e9es deux fois par an depuis 2008. Nomm\u00e9es DjangoCon, une se d\u00e9roule en Europe et l'autre aux \u00c9tats-Unis.</p>\r\n\r\n<p>Plusieurs sites grand public sont d\u00e9sormais fond\u00e9s sur Django, dont Pinterest et Instagram au moins en 2011 ou encore Mozilla.</p>",
+        "date": "2019-02-01"
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 41,
+    "fields": {
+        "post": 2,
+        "author_name": "dfd",
+        "author_email": "ddddlkk@fff.mlkdd",
+        "text": "dff",
+        "date": "2019-03-14T21:05:11.945Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 40,
+    "fields": {
+        "post": 3,
+        "author_name": "fff",
+        "author_email": "ddddlkk@fff.mlkdd",
+        "text": "ddd",
+        "date": "2019-03-14T21:01:38.054Z",
+        "valid": false
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 39,
+    "fields": {
+        "post": 1,
+        "author_name": "dff",
+        "author_email": "ddddlkk@fff.mlkdd",
+        "text": "ddds",
+        "date": "2019-03-14T12:58:07.637Z",
+        "valid": false
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 38,
+    "fields": {
+        "post": 3,
+        "author_name": "fg",
+        "author_email": "ffg@kjh.lmd",
+        "text": "ghjk\r\nhhjl",
+        "date": "2019-03-14T12:46:59.527Z",
+        "valid": false
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 36,
+    "fields": {
+        "post": 2,
+        "author_name": "ddff",
+        "author_email": "ddddlkk@fff.mlkdd",
+        "text": "sssggfffseezf",
+        "date": "2019-03-13T20:25:58.752Z",
+        "valid": false
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 35,
+    "fields": {
+        "post": 2,
+        "author_name": "fggh",
+        "author_email": "ddddlkk@fff.mlk",
+        "text": "www",
+        "date": "2019-03-13T20:25:31.669Z",
+        "valid": false
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 6,
+    "fields": {
+        "post": 2,
+        "author_name": "test 3",
+        "author_email": "test3@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T19:31:24.593Z",
+        "valid": false
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 34,
+    "fields": {
+        "post": 1,
+        "author_name": "fgg",
+        "author_email": "ddddlkk@fff.mlkdd",
+        "text": "ddd",
+        "date": "2019-03-08T12:22:02.405Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 33,
+    "fields": {
+        "post": 1,
+        "author_name": "dffd",
+        "author_email": "ddddlkk@fff.mlkdd",
+        "text": "dddx",
+        "date": "2019-03-07T07:32:13.541Z",
+        "valid": false
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 28,
+    "fields": {
+        "post": 1,
+        "author_name": "test 5",
+        "author_email": "test5@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T21:58:16.374Z",
+        "valid": false
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 27,
+    "fields": {
+        "post": 3,
+        "author_name": "test 5",
+        "author_email": "test5@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T21:45:56.714Z",
+        "valid": false
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 25,
+    "fields": {
+        "post": 1,
+        "author_name": "test 4",
+        "author_email": "test4@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T21:43:22.814Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 23,
+    "fields": {
+        "post": 3,
+        "author_name": "test 4",
+        "author_email": "test4@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T21:33:59.664Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 15,
+    "fields": {
+        "post": 1,
+        "author_name": "test 3",
+        "author_email": "test3@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T21:02:39.648Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 5,
+    "fields": {
+        "post": 1,
+        "author_name": "test 2",
+        "author_email": "test2@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T19:30:43.689Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 4,
+    "fields": {
+        "post": 3,
+        "author_name": "test 2",
+        "author_email": "test2@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T18:58:38.590Z",
+        "valid": true
+    }
+},
+{
+    "model": "blogapp.comment",
+    "pk": 3,
+    "fields": {
+        "post": 1,
+        "author_name": "test 1",
+        "author_email": "test1@test.com",
+        "text": "cool !",
+        "date": "2019-02-16T18:56:46.341Z",
+        "valid": true
+    }
+}
+]

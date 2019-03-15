@@ -1,0 +1,98 @@
+[
+{
+    "model": "websiteapp.page",
+    "pk": 8,
+    "fields": {
+        "link_name": "main-contact",
+        "title_fr": "Formulaire de contact",
+        "title_en": "Contact form",
+        "subtitle_fr": "no subtitle",
+        "subtitle_en": "pas de sous-titre",
+        "position": 0
+    }
+},
+{
+    "model": "websiteapp.page",
+    "pk": 7,
+    "fields": {
+        "link_name": "post",
+        "title_fr": "Commentaires",
+        "title_en": "Comments",
+        "subtitle_fr": "Laisser un commentaire",
+        "subtitle_en": "Post a comment.",
+        "position": 0
+    }
+},
+{
+    "model": "websiteapp.page",
+    "pk": 6,
+    "fields": {
+        "link_name": "mentions",
+        "title_fr": "Mentions l\u00e9gales",
+        "title_en": "Legal notices",
+        "subtitle_fr": "Ici les mentions.",
+        "subtitle_en": "Here the notices.",
+        "position": 5
+    }
+},
+{
+    "model": "websiteapp.page",
+    "pk": 5,
+    "fields": {
+        "link_name": "contact",
+        "title_fr": "Contact",
+        "title_en": "Contact",
+        "subtitle_fr": "Contactez-moi",
+        "subtitle_en": "Contact me",
+        "position": 4
+    }
+},
+{
+    "model": "websiteapp.page",
+    "pk": 4,
+    "fields": {
+        "link_name": "blog",
+        "title_fr": "Blog",
+        "title_en": "Blog",
+        "subtitle_fr": "Les articles techniques.",
+        "subtitle_en": "The technical articles.",
+        "position": 3
+    }
+},
+{
+    "model": "websiteapp.page",
+    "pk": 3,
+    "fields": {
+        "link_name": "portfolio",
+        "title_fr": "Portfolio",
+        "title_en": "Portfolio",
+        "subtitle_fr": "La pr\u00e9sentation des travaux.",
+        "subtitle_en": "The presentation of the works.",
+        "position": 2
+    }
+},
+{
+    "model": "websiteapp.page",
+    "pk": 2,
+    "fields": {
+        "link_name": "about",
+        "title_fr": "\u00c0 propos",
+        "title_en": "About",
+        "subtitle_fr": "La phrase d\u00e9crivant le responsable du site (entreprise, artisan, blogueur, ...).",
+        "subtitle_en": "The sentence describing the site manager (company, freelancer, blogger, ...).",
+        "position": 1
+    }
+},
+{
+    "model": "websiteapp.page",
+    "pk": 1,
+    "fields": {
+        "link_name": "index",
+        "title_fr": "Accueil",
+        "title_en": "Home",
+        "subtitle_fr": "La phrase d'accroche mettant en avant le service propos\u00e9.",
+        "subtitle_en": "The pickup line highlighting the proposed service.",
+        "position": 0
+    }
+}
+]

@@ -1,0 +1,52 @@
+[
+{
+    "model": "websiteapp.cardbutton",
+    "pk": 5,
+    "fields": {
+        "card_name": "contact",
+        "text_en": "Send",
+        "text_fr": "Envoyer",
+        "position": 0
+    }
+},
+{
+    "model": "websiteapp.cardbutton",
+    "pk": 3,
+    "fields": {
+        "card_name": "blog",
+        "text_en": "Read more...",
+        "text_fr": "Lire la suite...",
+        "position": 0
+    }
+},
+{
+    "model": "websiteapp.cardbutton",
+    "pk": 2,
+    "fields": {
+        "card_name": "project",
+        "text_en": "Visit",
+        "text_fr": "Visiter",
+        "position": 0
+    }
+},
+{
+    "model": "websiteapp.cardbutton",
+    "pk": 1,
+    "fields": {
+        "card_name": "portfolio",
+        "text_en": "View details",
+        "text_fr": "Voir les d\u00e9tails",
+        "position": 0
+    }
+},
+{
+    "model": "websiteapp.cardbutton",
+    "pk": 4,
+    "fields": {
+        "card_name": "comment",
+        "text_en": "Send",
+        "text_fr": "Envoyer",
+        "position": 0
+    }
+}
+]

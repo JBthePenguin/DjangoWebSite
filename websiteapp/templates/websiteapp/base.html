@@ -12,73 +12,79 @@
 
     <!-- Favicon -->
     <link rel="icon" href="{% static 'websiteapp/img/favicon.png' %}" type="image/x-icon" />
-    
+    <!---->
+    <!-- Title -->
     <title>
-        {{ title }}
+        Django Website | {{ page.title }}
     </title>    
-    
+    <!---->
     <!-- Bootstrap CSS -->
     <link href="{% static 'websiteapp/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'websiteapp/bootstrap/css/bootstrap4-toggle.min.css' %}" rel="stylesheet">
+    <!---->
     <!-- FONT AWESOME -->
     <link href="{% static 'websiteapp/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <!---->
     <!-- custom styles -->
-    <link href="{% static 'websiteapp/css/styles.css' %}" rel="stylesheet"> 
+    <link href="{% static 'websiteapp/css/styles.css' %}" rel="stylesheet">
+    <!----> 
 </head>
 
 <body class="{{ bg_class }}">
-
     <!-- NAVBAR -->
     {% include 'websiteapp/navbar.html' %}
-    <!-- -->    
-
+    <!---->    
     <!-- Header -->
-    <header id="header_{{ id }}" class="{{ bg_class }} container-fluid text-center">
-            <h1 class="text-danger">
-                {{ titles.0 }}
-            </h1>
-            <h3>
-                {{ titles.1|linebreaks }}
-            </h3>
-            <ul class="list-unstyled">
-                {% for item in  list_items %}
-                    <li>
-                        <h4>
-                            <a href="#{{ item }}" class="text-danger">
-                                {{ item }}
-                            </a>
-                        </h4>
-                    </li>
-                {% endfor %}    
-            </ul>
+    <header id="header_{{ page.link_name }}" class="{{ bg_class }} container-fluid text-center">
+        <!-- Title -->
+        <h1 class="text-danger">
+            {{ page.title }}
+        </h1>
+        <!---->
+        <!-- Subtitle -->
+        <h3>
+            {{ page.subtitle|linebreaks }}
+        </h3>
+        <!---->
+        <!-- Links list -->
+        <ul class="list-unstyled">
+            {% for category in  categories %}
+                <li>
+                    <h4>
+                        <a href="#{{ category.link_name }}" class="text-danger">
+                            {{ category.name }}
+                        </a>
+                    </h4>
+                </li>
+            {% endfor %}    
+        </ul>
+        <!---->
     </header>
-    <!-- -->
-
+    <!---->
     <!-- Main -->
-    <main id="main_{{ id }}" class="container-fluid">
-        <div class="row ">
+    <main id="main_{{ page.link_name }}" class="container-fluid">
+        <div class="row">
             {% block main %}{% endblock %}
         </div>
     </main>
-    <!-- -->
-
+    <!---->
     <!-- Footer -->
     {% include 'websiteapp/footer.html' %}
-    <!-- -->
-
+    <!---->
     <!-- Scripts -->
     <!-- JQuery -->
     <script src="{% static 'websiteapp/jquery/jquery-3.3.1.slim.min.js' %}"></script>
     <script src="{% static 'websiteapp/jquery/jquery-3.3.1.min.js' %}"></script>
-    
+    <!---->    
     <!-- Bootstrap JavaScript -->
     <script src="{% static 'websiteapp/bootstrap/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'websiteapp/bootstrap/js/bootstrap4-toggle.min.js' %}"></script>
     <script src="{% static 'websiteapp/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    
+    <!---->
     <!-- Custom script -->
     <script src="{% static 'websiteapp/js/script.js' %}"></script>
-    <!-- -->
+    <!---->
+    <!---->
 </body>
 
 </html>

@@ -1,0 +1,79 @@
+[
+{
+    "model": "websiteapp.formplaceholder",
+    "pk": 4,
+    "fields": {
+        "form_name": "contact",
+        "input_name": "name",
+        "text_en": "Your name",
+        "text_fr": "Votre nom",
+        "position": 0
+    }
+},
+{
+    "model": "websiteapp.formplaceholder",
+    "pk": 5,
+    "fields": {
+        "form_name": "contact",
+        "input_name": "email",
+        "text_en": "Your email",
+        "text_fr": "Votre email",
+        "position": 1
+    }
+},
+{
+    "model": "websiteapp.formplaceholder",
+    "pk": 6,
+    "fields": {
+        "form_name": "contact",
+        "input_name": "subject",
+        "text_en": "Subject",
+        "text_fr": "Objet",
+        "position": 2
+    }
+},
+{
+    "model": "websiteapp.formplaceholder",
+    "pk": 7,
+    "fields": {
+        "form_name": "contact",
+        "input_name": "content",
+        "text_en": "Your message",
+        "text_fr": "Votre message",
+        "position": 3
+    }
+},
+{
+    "model": "websiteapp.formplaceholder",
+    "pk": 3,
+    "fields": {
+        "form_name": "comment",
+        "input_name": "text",
+        "text_en": "Your comment",
+        "text_fr": "Votre commentaire",
+        "position": 2
+    }
+},
+{
+    "model": "websiteapp.formplaceholder",
+    "pk": 2,
+    "fields": {
+        "form_name": "comment",
+        "input_name": "email",
+        "text_en": "Your email",
+        "text_fr": "Votre email",
+        "position": 1
+    }
+},
+{
+    "model": "websiteapp.formplaceholder",
+    "pk": 1,
+    "fields": {
+        "form_name": "comment",
+        "input_name": "name",
+        "text_en": "Your name",
+        "text_fr": "Votre nom",
+        "position": 0
+    }
+}
+]

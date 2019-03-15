@@ -1,0 +1,29 @@
+[
+{
+    "model": "websiteapp.alertmessage",
+    "pk": 3,
+    "fields": {
+        "name": "sent message",
+        "text_en": "Your message has been sent.",
+        "text_fr": "Votre message a \u00e9t\u00e9 envoy\u00e9."
+    }
+},
+{
+    "model": "websiteapp.alertmessage",
+    "pk": 2,
+    "fields": {
+        "name": "no comment",
+        "text_en": "No comment for this post.",
+        "text_fr": "Aucun commentaire pour cet article."
+    }
+},
+{
+    "model": "websiteapp.alertmessage",
+    "pk": 1,
+    "fields": {
+        "name": "add comment",
+        "text_en": "Your comment will be added as soon as I have validated it.",
+        "text_fr": "Votre commentaire sera ajout\u00e9 d\u00e8s que je l'aurai valid\u00e9."
+    }
+}
+]

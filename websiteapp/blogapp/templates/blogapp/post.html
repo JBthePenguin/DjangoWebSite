@@ -9,33 +9,38 @@
     <div class="card {{ bg_class }}">
         <!-- Image -->
         <img class="card-img-top w-75 mx-auto" src="{{ post.image.url }}" alt="Card image cap">
-        <div class="card-body">
+        <!---->
+        <div class="card-body text-justify">
             <!-- Text -->
-            <p class="card-text text-left">
+            <p class="card-text">
                 {{ post.content|safe }}
             </p>
+            <!---->
             <!-- Date -->
             <h6 class="card-subtitle mb-2 text-right">
                 {{ post.date|date:"j F Y" }}
             </h6>
+            <!---->
         </div>
         <!-- Comments -->
         <div class="card-body">
             <hr align="center" width="100%">
             <h5>
-                {{ titles.2 }}
+                {{ main_titles.title }}
             </h5>
-            {% if comment_send is True %}
+            {% if add_comment is not False %}
                 <!-- Confirm send -->
                 <div class="alert alert-warning text-center mx-auto">
-                    {{ messages.0 }}
+                    {{ add_comment.text }}
                 </div>
+                <!---->
             {% endif %}
-            {% if comments.count == 0 %}
+            {% if no_comment is not False %}
                 <!-- No comment -->
                 <div class="alert alert-warning text-center">
-                    {{ messages.1 }}
+                    {{ no_comment.text }}
                 </div>
+                <!---->
             {% else %}
                 <!-- Comments -->
                 {% for comment in comments %}
@@ -54,22 +59,27 @@
                             {{ comment.date }}
                         </small>
                     </div>
-                {% endfor %}                   
+                    <!---->
+                {% endfor %}
+                <!---->                   
             {% endif %}
             <hr align="center" width="100%">
             <!-- Form -->
             <h5>
-                {{ titles.3 }}
+                {{ main_titles.subtitle }}
             </h5>
             <form id="comment-form" role="form" action="" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button class="btn btn-danger" type="submit">
-                    {{ btn_comment }}
+                    {{ btn_card_text }}
                 </button>
             </form>
+            <!---->
         </div>
+        <!---->
     </div>
 </div>
+<!---->
 {% endblock %}
 <!-- -->

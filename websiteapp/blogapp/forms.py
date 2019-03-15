@@ -1,24 +1,17 @@
 from django import forms
+from websiteapp.models import get_placeholders
 from websiteapp.blogapp.models import Comment
 
 
 class CommentForm(forms.ModelForm):
-    """ class for the forms for add or update actu """
+    """ form to add a comment """
     class Meta:
         model = Comment
         fields = ['author_name', 'author_email', 'text']
 
-    def __init__(self, *args, **kwargs):
-        self.language = kwargs.pop('language')
-        super(CommentForm, self).__init__(*args, **kwargs)
-        if self.language == "fr":
-            placeholder_name = "Votre nom"
-            placeholder_email = "Votre email"
-            placeholder_text = "Votre commentaire"
-        else:
-            placeholder_name = "Your name"
-            placeholder_email = "Your email"
-            placeholder_text = "Your comment"
+    def __init__(self, *args):
+        super(CommentForm, self).__init__(*args)
+        placeholders = get_placeholders("comment")
 
         def set_label_widget(field_name, placeholder):
             """ no display label and update placeholder """
@@ -26,8 +19,6 @@ class CommentForm(forms.ModelForm):
             self.fields[field_name].widget.attrs.update(
                 {'placeholder': placeholder})
         # set inputs
-        set_label_widget("author_name", placeholder_name)
-        set_label_widget("author_email", placeholder_email)
-        set_label_widget("text", placeholder_text)
-        self.fields['author_email'].error_messages = {
-            'invalid': 'invalid email'}
+        set_label_widget("author_name", placeholders[0].text)
+        set_label_widget("author_email", placeholders[1].text)
+        set_label_widget("text", placeholders[2].text)

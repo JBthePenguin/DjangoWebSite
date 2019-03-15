@@ -6,50 +6,44 @@
             <div class="col-md-4 mx-auto">
                 <ul class="list-unstyled list-inline">
                     <i>
-                        {{ footer_items.0 }}
+                        {{ footer_items.0.name }}
                     </i>
-                    <li class="list-inline-item">
-                        <a href="https://github.com/JBthePenguin/" onclick="window.open(this.href);  return false;">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://twitter.com/JBthePenguin/" onclick="window.open(this.href);  return false;">
-                            <i class="fa fa-twitter text-info"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.linkedin.com/in/jean-baptiste-labaty-a5b084155/" onclick="window.open(this.href);  return false;">
-                            <i class="fa fa-linkedin text-primary"></i>
-                        </a>
-                    </li>
+                    {% for link in social_links %}
+                        <li class="list-inline-item">
+                            <a href="{{ link.url }}" onclick="window.open(this.href);  return false;">
+                                <i class="fa fa-{{ link.name }}"></i>
+                            </a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
             <!-- Theme -->
             <div class="col-md-4 col-6 mx-auto">
                 <i>
-                    {{ footer_items.1 }}
+                    {{ footer_items.1.name }}
                 </i>
                 <input id="theme-check" type="checkbox" {{ btn_theme }} data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="light" data-offstyle="dark" data-size="xs">
             </div>
             <!-- Language -->
             <div class="col-md-4 col-6 mx-auto">
                 <i> 
-                    {{ footer_items.2 }}
+                    {{ footer_items.2.name }}
                 </i>
                 <input id="lang-check" type="checkbox" {{ btn_lang }} data-toggle="toggle" data-on="Fr" data-off="En" data-onstyle="{{ btn_lang_style }}" data-offstyle="{{ btn_lang_style }}" data-size="xs">
             </div>
         </div>
     </div>
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">
-        <a href="{% url 'mentions' %}" class="text-danger">
-            {{ footer_items.3 }}
+    <div class="footer-copyright text-center container-fluid py-3">
+        <div class="row">
+        <a href="{% url 'mentions' %}" class="col-md-4 col-12 mx-auto text-danger">
+            {{ footer_items.3.name }}
         </a>
-        <i> ©2019 NoRightReserved.</i>
-        <a href="demostructuredjango.herokuapp.com" class="text-danger">
-            DemoStructureDjango.herokuapp.com
+        <i class="col-md-4 col-12 mx-auto">{{ footer_items.4.name }}</i>
+        <a href="{% url 'index' %}" class="col-md-4 col-12 mx-auto text-danger">
+            {{ footer_items.5.name }}
         </a>
+    </div>
     </div>
 </footer>      
 <!--  -->

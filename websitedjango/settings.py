@@ -144,6 +144,7 @@ INTERNAL_IPS = ['127.0.0.1']
 # ColorTheme
 THEME = "dark"
 
+
 # database for TravisCI
 if 'TRAVIS' in os.environ:
     DATABASES = {

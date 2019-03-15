@@ -1,0 +1,29 @@
+[
+{
+    "model": "websiteapp.sociallink",
+    "pk": 2,
+    "fields": {
+        "name": "twitter",
+        "url": "https://twitter.com/JBthePenguin/",
+        "position": 1
+    }
+},
+{
+    "model": "websiteapp.sociallink",
+    "pk": 3,
+    "fields": {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/jean-baptiste-labaty-a5b084155/",
+        "position": 2
+    }
+},
+{
+    "model": "websiteapp.sociallink",
+    "pk": 1,
+    "fields": {
+        "name": "github",
+        "url": "https://github.com/JBthePenguin/",
+        "position": 0
+    }
+}
+]

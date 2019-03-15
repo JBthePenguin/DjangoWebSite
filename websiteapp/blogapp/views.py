@@ -1,108 +1,73 @@
 from django.shortcuts import render
-from websitedjango import settings
-from websiteapp.views import Context
-from websiteapp.blogapp.models import BlogCategory, Post, Comment
+from django.core.mail import send_mail
+from websiteapp.context import Context
+from websiteapp.models import get_page, get_buttons_card, get_alert_message
+from websiteapp.blogapp.models import (
+    get_blog_categories, get_all_posts, get_post, get_comments)
 from websiteapp.blogapp.forms import CommentForm
-
-
-def update_lang_post(post):
-    """ update language for a post """
-    if settings.LANGUAGE_CODE == "fr":
-        post.title = post.title_fr
-        post.content = post.content_fr
-    else:
-        post.title = post.title_en
-        post.content = post.content_en
-    post.save(update_fields=["title", "content"])
 
 
 def blog(request):
     """ return the blog page """
+    # Page blog
+    page = get_page("blog")
+    # Categories
+    categories = get_blog_categories()
+    # Post
+    posts = get_all_posts()
+    # Card button
+    buttons_card = get_buttons_card("blog")
     context = Context()
     context.update(
-        blog="text-danger",
-        id="blog")
-    # update language for title and button in card
-    titles = [context["navbar_items"][2]]
-    if settings.LANGUAGE_CODE == "fr":
-        titles.append("Les articles techniques.")
-        btn_card_text = "Lire la suite"
-    else:
-        titles.append("The technical articles.")
-        btn_card_text = "Read more"
-    context.update(
-        titles=titles,
-        btn_card_text=btn_card_text)
-    # update language for list items and categories
-    categories = BlogCategory.objects.all()
-    list_items = []
-    for category in categories:
-        if settings.LANGUAGE_CODE == "fr":
-            category.name = category.name_fr
-        else:
-            category.name = category.name_en
-        category.save(update_fields=["name"])
-        list_items.append(category.name)
-    context.update(list_items=list_items, categories=categories)
-    # update language for posts
-    posts = Post.objects.all().order_by("date").reverse()
-    for post in posts:
-        update_lang_post(post)
-    context.update(posts=posts)
+        page=page, categories=categories,
+        posts=posts, btn_card_text=buttons_card[0].text)
     return render(request, 'blogapp/blog.html', context)
 
 
-def post(request, post_id):
+def post(request, post_name):
     """ return the page with the post selected """
-    context = Context()
-    context.update(
-        blog="text-danger",
-        id="post")
-    # update language for the post titles messages and btn send comment text
-    post = Post.objects.get(id=post_id)
-    update_lang_post(post)
-    if settings.LANGUAGE_CODE == "fr":
-        post.category.name = post.category.name_fr
-        title_comment = "Commentaires"
-        title_form = "Laisser un commentaire"
-        messages = [
-            "Votre commentaire sera ajouté dès que je l'aurai validé.",
-            "Aucun commentaire pour cet article."]
-        btn_comment = "Envoyer"
+    # Post
+    post = get_post(post_name)
+    # Page post
+    page = {
+        "link_name": "blog",
+        "title": "Blog | {}".format(post.category_name),
+        "subtitle": post.title}
+    # Main titles
+    main_titles = get_page("post")
+    # Comments
+    comments = get_comments(post_name)
+    if len(comments) == 0:
+        # Alert message
+        no_comment = get_alert_message("no comment")
     else:
-        post.category.name = post.category.name_en
-        title_comment = "Comments"
-        title_form = "Post a comment."
-        messages = [
-            "Your comment will be added as soon as I have validated it.",
-            "No comment for this post."]
-
-        btn_comment = "Send"
-    post.save(update_fields=["category"])
-    titles = [post.category.name, post.title, title_comment, title_form]
+        no_comment = False
+    # Card button
+    buttons_card = get_buttons_card("comment")
     # Form POST
-    form = CommentForm(language=settings.LANGUAGE_CODE)
-    comment_send = False
+    form = CommentForm()
+    add_comment = False
     if request.method == 'POST':
-        # comment has sent
-        form = CommentForm(request.POST, language=settings.LANGUAGE_CODE)
+        form = CommentForm(request.POST)
         if form.is_valid():
-            # save comment in db
+            # send a message to admin to inform him
+            # that a comment has been added and save it in db
             comment = form.save(commit=False)
             comment.post = post
+            send_mail(
+                "A comment was added.",
+                "'{}'\nhas been added to the post '{}' by {} <- {} ->".format(
+                    comment.text, post_name,
+                    comment.author_name, comment.author_email),
+                "DjangoWebSite", ['JBthePenguin'], fail_silently=False)
             comment.save()
-            comment_send = True
-            form = CommentForm(language=settings.LANGUAGE_CODE)
-    # Comments
-    comments = Comment.objects.filter(
-        post=post, valid=True).order_by("date").reverse()
+            form = CommentForm()
+            # Alert message
+            add_comment = get_alert_message("add comment")
+    context = Context()
     context.update(
-        titles=titles,
-        btn_comment=btn_comment,
-        post=post,
-        comments=comments,
-        form=form,
-        comment_send=comment_send,
-        messages=messages
-    )
+        page=page, main_titles=main_titles,
+        btn_card_text=buttons_card[0].text, post=post,
+        comments=comments, form=form,
+        no_comment=no_comment, add_comment=add_comment)
     return render(request, 'blogapp/post.html', context)

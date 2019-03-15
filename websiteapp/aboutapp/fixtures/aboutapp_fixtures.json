@@ -1,0 +1,113 @@
+[
+{
+    "model": "aboutapp.aboutcategory",
+    "pk": 2,
+    "fields": {
+        "link_name": "skills",
+        "name_en": "Skills",
+        "name_fr": "Comp\u00e9tences",
+        "position": 1
+    }
+},
+{
+    "model": "aboutapp.aboutcategory",
+    "pk": 1,
+    "fields": {
+        "link_name": "services",
+        "name_en": "Services",
+        "name_fr": "Services",
+        "position": 0
+    }
+},
+{
+    "model": "aboutapp.term",
+    "pk": 7,
+    "fields": {
+        "category": 2,
+        "logo": "about/45._Award.png",
+        "name_en": "Fields",
+        "name_fr": "Domaines",
+        "description_en": "<ul class=\"list-unstyled\">\r\n<li>Project management</li>\r\n<li>Graphic design</li>\r\n<li>Specific application</li>\r\n</ul>",
+        "description_fr": "<ul class=\"list-unstyled\">\r\n<li>Gestion de projet</li>\r\n<li>Conception graphique</li>\r\n<li>Application sp\u00e9cifique</li>\r\n</ul>",
+        "position": 0
+    }
+},
+{
+    "model": "aboutapp.term",
+    "pk": 3,
+    "fields": {
+        "category": 1,
+        "logo": "about/26._Settings.png",
+        "name_en": "Development",
+        "name_fr": "D\u00e9veloppement",
+        "description_en": "Create an application.",
+        "description_fr": "Cr\u00e9er une application.",
+        "position": 1
+    }
+},
+{
+    "model": "aboutapp.term",
+    "pk": 4,
+    "fields": {
+        "category": 1,
+        "logo": "about/78._Tablet.png",
+        "name_en": "Design",
+        "name_fr": "Conception",
+        "description_en": "Design an application.",
+        "description_fr": "Concevoir une application.",
+        "position": 0
+    }
+},
+{
+    "model": "aboutapp.term",
+    "pk": 6,
+    "fields": {
+        "category": 2,
+        "logo": "about/35._Layers.png",
+        "name_en": "Languages",
+        "name_fr": "Langages",
+        "description_en": "<ul class=\"list-unstyled\">\r\n<li>HTML / CSS / JS</li>\r\n<li>Python</li>\r\n<li>SQL</li>\r\n</ul>",
+        "description_fr": "<ul class=\"list-unstyled\">\r\n<li>HTML / CSS / JS</li>\r\n<li>Python</li>\r\n<li>SQL</li>\r\n</ul>",
+        "position": 2
+    }
+},
+{
+    "model": "aboutapp.term",
+    "pk": 5,
+    "fields": {
+        "category": 2,
+        "logo": "about/51._Package.png",
+        "name_en": "Softwares",
+        "name_fr": "Logiciels",
+        "description_en": "<ul class=\"list-unstyled\">\r\n<li>Libre Office</li>\r\n<li>Gimp</li>\r\n<li>StarUML</li>\r\n</ul>",
+        "description_fr": "<ul class=\"list-unstyled\">\r\n<li>Libre Office</li>\r\n<li>Gimp</li>\r\n<li>StarUML</li>\r\n</ul>",
+        "position": 1
+    }
+},
+{
+    "model": "aboutapp.term",
+    "pk": 2,
+    "fields": {
+        "category": 1,
+        "logo": "about/43._Globe.png",
+        "name_en": "Production",
+        "name_fr": "Production",
+        "description_en": "Exploitation and delivery.",
+        "description_fr": "Exploitation et livraison.",
+        "position": 2
+    }
+},
+{
+    "model": "aboutapp.term",
+    "pk": 1,
+    "fields": {
+        "category": 1,
+        "logo": "about/57._Exchange.png",
+        "name_en": "Maintenance",
+        "name_fr": "Maintenance",
+        "description_en": "Management and support.",
+        "description_fr": "Gestion et accompagnement.",
+        "position": 3
+    }
+}
+]

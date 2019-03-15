@@ -1,0 +1,56 @@
+[
+{
+    "model": "websiteapp.footeritem",
+    "pk": 6,
+    "fields": {
+        "name_fr": "DemoStructureDjango.com",
+        "name_en": "DemoStructureDjango.com",
+        "position": 5
+    }
+},
+{
+    "model": "websiteapp.footeritem",
+    "pk": 5,
+    "fields": {
+        "name_fr": "\u00a92019 NoRightReserved.",
+        "name_en": "\u00a92019 NoRightReserved.",
+        "position": 4
+    }
+},
+{
+    "model": "websiteapp.footeritem",
+    "pk": 4,
+    "fields": {
+        "name_fr": "Mentions l\u00e9gales",
+        "name_en": "Legal notices",
+        "position": 3
+    }
+},
+{
+    "model": "websiteapp.footeritem",
+    "pk": 3,
+    "fields": {
+        "name_fr": "Langue:",
+        "name_en": "Language:",
+        "position": 2
+    }
+},
+{
+    "model": "websiteapp.footeritem",
+    "pk": 2,
+    "fields": {
+        "name_fr": "Th\u00e8me:",
+        "name_en": "Theme:",
+        "position": 1
+    }
+},
+{
+    "model": "websiteapp.footeritem",
+    "pk": 1,
+    "fields": {
+        "name_fr": "Suivez-moi:",
+        "name_en": "Follow me:",
+        "position": 0
+    }
+}
+]

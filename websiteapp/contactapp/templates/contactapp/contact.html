@@ -5,39 +5,38 @@
 <!-- main -->
 {% block main %}
 <div class="col-md-8 mx-auto">
-    {% if send_msg is True %}
+    {% if sent_message is not False %}
         <!-- Confirm message has sent --> 
         <div class="alert alert-warning text-center mx-auto">
-            {{ confirm_message }}
-            </div>
-        {% endif %}
+            {{ sent_message.text }}
+        </div>
+        <!---->
+    {% endif %}
     <div class="card {{ bg_class }}">
         <div class="card-body">
-            <!-- Contact -->
+            <!-- Contact items-->
             <ul class="list-unstyled text-center">
-                <li>
-                    <i class="fa fa-home text-danger"></i>  3 route du Gers, L.A, CALIFORNIA, USA
-                </li>
-                <li>
-                    <i class="fa fa-envelope text-danger"></i>  email@mail.com
-                </li>
-                <li>
-                    <i class="fa fa-phone text-danger"></i>  01 23 45 67 89
-                </li> 
+                {% for item in contact_items %}
+                    <li>
+                        <i class="fa fa-{{ item.logo }} text-danger"></i> {{ item.text }}
+                    </li>
+                {% endfor %}
             </ul>
+            <!---->
             <!-- Contact form -->
             <h5>
-                {{ titles.2 }}
+                {{ main_titles.title }}
             </h5>
             <form id="contact-form" role="form" action="" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button class="btn btn-danger" type="submit">
-                    {{ btn_message }}
+                    {{ btn_card_text }}
                 </button>
             </form>
+            <!---->
         </div>
      </div>
 </div>
 {% endblock %}
-<!-- -->
+<!---->

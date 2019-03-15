@@ -5,8 +5,8 @@ from websiteapp.portfolioapp.models import PortfolioCategory, Project
 
 @admin.register(PortfolioCategory)
 class PortfolioCategoryAdmin(admin.ModelAdmin):
-    search_fields = ('name_en', 'name_fr',)
-    list_display = ('name_en', 'name_fr',)
+    search_fields = ('link_name', 'name_en', 'name_fr', 'position')
+    list_display = ('link_name', 'name_en', 'name_fr', 'position')
 
 
 class CustomModelChoiceField(forms.ModelChoiceField):
@@ -27,7 +27,7 @@ class ProjectAdmin(admin.ModelAdmin):
     form = ProjectAdminForm
     search_fields = (
         'title_en', 'title_fr', 'category__name_fr', 'category__name_en')
-    list_display = ('title_en', 'title_fr', 'get_category')
+    list_display = ('title_en', 'title_fr', 'get_category', 'date')
 
     def get_category(self, obj):
         return "%s - %s" % (obj.category.name_en, obj.category.name_fr)

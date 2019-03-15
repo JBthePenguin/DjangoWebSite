@@ -1,0 +1,178 @@
+[
+{
+    "model": "portfolioapp.portfoliocategory",
+    "pk": 2,
+    "fields": {
+        "link_name": "e-commerce-sites",
+        "name_en": "E-commerce sites",
+        "name_fr": "Sites commerciaux",
+        "position": 0
+    }
+},
+{
+    "model": "portfolioapp.portfoliocategory",
+    "pk": 7,
+    "fields": {
+        "link_name": "wiki-web-applications",
+        "name_en": "Wiki web applications",
+        "name_fr": "Applications web wiki",
+        "position": 3
+    }
+},
+{
+    "model": "portfolioapp.portfoliocategory",
+    "pk": 1,
+    "fields": {
+        "link_name": "search-engines",
+        "name_en": "Search engines",
+        "name_fr": "Moteurs de recherche",
+        "position": 1
+    }
+},
+{
+    "model": "portfolioapp.portfoliocategory",
+    "pk": 3,
+    "fields": {
+        "link_name": "social-networks",
+        "name_en": "Social networks",
+        "name_fr": "R\u00e9seaux sociaux",
+        "position": 2
+    }
+},
+{
+    "model": "portfolioapp.project",
+    "pk": 7,
+    "fields": {
+        "category": 2,
+        "link_name": "alibaba",
+        "image": "portfolio/alibaba.png",
+        "title_en": "Alibaba",
+        "title_fr": "Alibaba",
+        "subtitle_en": "Creation of the platform",
+        "subtitle_fr": "Cr\u00e9ation de la plateforme",
+        "description_en": "<p><b>Alibaba Group Holding Limited (Chinese: \u963f\u91cc\u5df4\u5df4\u96c6\u56e2\u63a7\u80a1\u6709\u9650\u516c\u53f8)</b> is a Chinese multinational conglomerate specializing in e-commerce, retail, Internet and technology. Founded April 4, 1999, the company provides consumer-to-consumer (C2C), business-to-consumer (B2C),and business-to-business (B2B) sales services via web portals, as well as electronic payment services, shopping search engines and cloud computing services. It owns and operates a diverse array of businesses around the world in numerous sectors, and is named as one of the world's most admired companies by Fortune.</p>\r\n\r\n<p>At closing time on the date of its initial public offering (IPO) \u2013 US$25 billion \u2013 the world's highest in history, 19 September 2014, Alibaba's market value was US$231 billion. As of 19 December 2018, Alibaba's market cap stood at US$352.28 billion. It is one of the top 10 most valuable and biggest companies in the world. In January 2018, Alibaba became the second Asian company to break the US$500 billion valuation mark, after its competitor Tencent. As of 2018, Alibaba has the 9th highest global brand value.</p>\r\n\r\n<p>With operations in over 200 countries and territories, Alibaba is the world's largest retailer and e-commerce company, one of the largest Internet and AI companies, one of the biggest venture capital firms, and one of the biggest investment corporations in the world. The company hosts the largest B2B (Alibaba.com), C2C (Taobao), and B2C (Tmall) marketplaces in the world. Its online sales and profits surpassed all US retailers (including Walmart, Amazon and eBay) combined since 2015. It has been expanding into the media industry, with revenues rising by triple percentage points year on year. It also sets the record on the 2018 edition of China's Singles' Day, the world's biggest online and offline shopping day.</p>",
+        "description_fr": "<p><b>Alibaba Group (chinois simplifi\u00e9 : \u963f\u91cc\u5df4\u5df4\u96c6\u56e2 ; chinois traditionnel : \u963f\u91cc\u5df4\u5df4\u96c6\u5718)</b> est une soci\u00e9t\u00e9 chinoise \u00e0 capital priv\u00e9 et d\u00e9tenue par une famille qui tire principalement ses revenus de ses activit\u00e9s sur Internet, dont un march\u00e9 public destin\u00e9 \u00e0 faciliter les \u00e9changes entre entreprises (qu'ils soient internationaux ou chinois), des plateformes de paiements et de ventes au d\u00e9tail, un moteur de recherche pour le magasinage et des services de cloud computing.</p>",
+        "site_link": "https://www.alibabagroup.com",
+        "date": "2018-11-07"
+    }
+},
+{
+    "model": "portfolioapp.project",
+    "pk": 6,
+    "fields": {
+        "category": 3,
+        "link_name": "facebook",
+        "image": "portfolio/facebook.png",
+        "title_en": "Facebook",
+        "title_fr": "Facebook",
+        "subtitle_en": "Design of the application",
+        "subtitle_fr": "Conception de l'application",
+        "description_en": "<p><b>Facebook, Inc.</b> is an American online social media and social networking service company. It is based in Menlo Park, California. It was founded by Mark Zuckerberg, along with fellow Harvard College students and roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes. It is considered one of the Big Four technology companies along with Amazon, Apple, and Google.</p>\r\n\r\n<p>The founders initially limited the website's membership to Harvard students and subsequently Columbia, Stanford, and Yale students. Membership was eventually expanded to the remaining Ivy League schools, MIT, and higher education institutions in the Boston area. Facebook gradually added support for students at various other universities, and eventually to high school students. Since 2006, anyone who claims to be at least 13 years old has been allowed to become a registered user of Facebook, though variations exist in this requirement, depending on local laws. The name comes from the face book directories often given to American university students. Facebook held its initial public offering (IPO) in February 2012, valuing the company at $104 billion, the largest valuation to date for a newly listed public company. It began selling stock to the public three months later. Facebook makes most of its revenue from advertisements that appear onscreen.</p>\r\n\r\n<p>The Facebook service can be accessed from devices with Internet connectivity, such as personal computers, tablets and smartphones. After registering, users can create a customized profile revealing information about themselves. Users can post text, photos and multimedia of their own devising and share it with other users as \"friends\". Users can use various embedded apps, and receive notifications of their friends' activities. Users may join common-interest groups.</p>\r\n\r\n<p>Facebook had more than 2.2 billion monthly active users as of January 2018. It receives prominent media coverage, including many controversies such as user privacy and psychological effects. The company has faced intense pressure over censorship and over content that some users find objectionable.</p>\r\n\r\n<p>Facebook's initial public offering (IPO) in February 2012 was the largest initial valuation to date for a public company ($104 billion).</p>\r\n\r\n<p>Facebook offers other products and services. It acquired Instagram, WhatsApp and Oculus Rift and independently developed Facebook Messenger.</p>",
+        "description_fr": "<p><b>Facebook</b> est un r\u00e9seau social en ligne qui permet \u00e0 ses utilisateurs de publier des images, des photos, des vid\u00e9os, des fichiers et documents, d'\u00e9changer des messages, joindre et cr\u00e9er des groupes et d'utiliser une vari\u00e9t\u00e9 d'applications.</p>\r\n\r\n<p>Facebook est fond\u00e9 en 2004 par Mark Zuckerberg et ses camarades de l'universit\u00e9 Harvard ; d'abord r\u00e9serv\u00e9 aux \u00e9tudiants de cette universit\u00e9, il s'est ensuite ouvert \u00e0 d'autres universit\u00e9s am\u00e9ricaines avant de devenir accessible \u00e0 tous en septembre 2006. Le nom du site provient des albums photo (\u00ab trombinoscopes \u00bb ou \u00ab facebooks \u00bb en anglais) regroupant les photos des visages de tous les \u00e9l\u00e8ves prises en d\u00e9but d'ann\u00e9e universitaire.</p>\r\n\r\n<p>Troisi\u00e8me site web le plus visit\u00e9 au monde apr\u00e8s Google et YouTube selon Alexa, il franchit en juin 2017 le nombre de 2 milliards d'utilisateurs actifs. Le 24 ao\u00fbt 2015, pour la premi\u00e8re fois, un milliard de personnes ont utilis\u00e9 Facebook dans la m\u00eame journ\u00e9e.</p>\r\n\r\n<p>Facebook fait r\u00e9guli\u00e8rement l'objet de d\u00e9bats tant sur le plan politique que juridique, \u00e9conomique, culturel et social. Son influence dans la sph\u00e8re publique et la mani\u00e8re dont il affecte la vie sociale de ses utilisateurs, son usage des donn\u00e9es personnelles, son r\u00f4le dans la propagation des fake news, sa responsabilit\u00e9 dans la banalisation des discours de haine, ou bien encore sa politique de r\u00e9gulation des contenus sont ainsi souvent discut\u00e9s dans l'actualit\u00e9.</p>",
+        "site_link": "https://www.facebook.com/",
+        "date": "2018-12-08"
+    }
+},
+{
+    "model": "portfolioapp.project",
+    "pk": 2,
+    "fields": {
+        "category": 1,
+        "link_name": "google",
+        "image": "portfolio/google.png",
+        "title_en": "Google",
+        "title_fr": "Google",
+        "subtitle_en": "Creation of the application",
+        "subtitle_fr": "Cr\u00e9ation de l'application",
+        "description_en": "<p><b>Google LLC</b> is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, search engine, cloud computing, software, and hardware. It is considered one of the Big Four technology companies, alongside Amazon, Apple and Facebook.</p>\r\n\r\n<p>Google was founded in 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a privately held company on September 4, 1998. An initial public offering (IPO) took place on August 19, 2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet interests. Sundar Pichai was appointed CEO of Google, replacing Larry Page who became the CEO of Alphabet.</p>\r\n\r\n<p>The company's rapid growth since incorporation has triggered a chain of products, acquisitions, and partnerships beyond Google's core search engine (Google Search). It offers services designed for work and productivity (Google Docs, Google Sheets, and Google Slides), email (Gmail/Inbox), scheduling and time management (Google Calendar), cloud storage (Google Drive), social networking (Google+), instant messaging and video chat (Google Allo, Duo, Hangouts), language translation (Google Translate), mapping and navigation (Google Maps, Waze, Google Earth, Street View), video sharing (YouTube), note-taking (Google Keep), and photo organizing and editing (Google Photos). The company leads the development of the Android mobile operating system, the Google Chrome web browser, and Chrome OS, a lightweight operating system based on the Chrome browser. Google has moved increasingly into hardware; from 2010 to 2015, it partnered with major electronics manufacturers in the production of its Nexus devices, and it released multiple hardware products in October 2016, including the Google Pixel smartphone, Google Home smart speaker, Google Wifi mesh wireless router, and Google Daydream virtual reality headset. Google has also experimented with becoming an Internet carrier (Google Fiber, Project Fi, and Google Station).</p>",
+        "description_fr": "<p><b>Google LLC</b> est une entreprise am\u00e9ricaine de services technologiques fond\u00e9e en 1998 dans la Silicon Valley, en Californie, par Larry Page et Sergey Brin, cr\u00e9ateurs du moteur de recherche Google.</p>\r\n\r\n<p>C'est une filiale de la soci\u00e9t\u00e9 Alphabet depuis ao\u00fbt 2015.</p>\r\n\r\n<p>L'entreprise s'est principalement fait conna\u00eetre \u00e0 travers la situation monopolistique de son moteur de recherche, concurrenc\u00e9 historiquement par AltaVista puis par Yahoo! et Bing. Elle a ensuite proc\u00e9d\u00e9 \u00e0 de nombreuses acquisitions et d\u00e9veloppements et d\u00e9tient aujourd'hui de nombreux logiciels et sites web notables parmi lesquels YouTube, le syst\u00e8me d'exploitation pour t\u00e9l\u00e9phones mobiles Android, ainsi que d'autres services tels que Gmail, Google Earth, Google Maps ou Google Play.</p>\r\n\r\n<p>Google s'est donn\u00e9 comme mission \u00ab d'organiser l'information \u00e0 l'\u00e9chelle mondiale et de la rendre universellement accessible et utile \u00bb. Cela dit, le moteur de recherche prot\u00e8ge \u00e9galement les propri\u00e9t\u00e9s intellectuelles en d\u00e9sindexant les sites qui tentent de violer les droits d'auteurs. Apr\u00e8s Larry Page et Eric Schmidt, son DG est, depuis 2015, Pichai Sundararajan.</p>\r\n\r\n<p>Google est devenu l'une des premi\u00e8res entreprises am\u00e9ricaines et mondiales par sa valorisation boursi\u00e8re, quelques ann\u00e9es apr\u00e8s une entr\u00e9e en bourse originale. D\u00e9but 2008, elle valait 176 milliards de dollars \u00e0 Wall Street. Le 1er f\u00e9vrier 2016, sa capitalisation boursi\u00e8re d\u00e9passe celle d'Apple et devient la premi\u00e8re des \u00c9tats-Unis, avec un total de 550 milliards de dollars dispers\u00e9s dans ses diff\u00e9rentes cat\u00e9gories d'actions.</p>\r\n\r\n<p>En 2014, le classement Best Global Brands d'Interbrand positionne la marque Google en seconde position mondiale, derri\u00e8re la marque Apple, avec une estimation de sa valeur \u00e0 107,43 milliards de dollars (+15 % par rapport \u00e0 2013), d\u00e9passant la barre des cent milliards de dollars pour la premi\u00e8re fois depuis la cr\u00e9ation de ce classement en 1974. En 2016, le classement Brand Z Top 100 place Google en premi\u00e8re position devant Apple.</p>",
+        "site_link": "https://google.com",
+        "date": "2019-02-01"
+    }
+},
+{
+    "model": "portfolioapp.project",
+    "pk": 1,
+    "fields": {
+        "category": 2,
+        "link_name": "amazon",
+        "image": "portfolio/amazon.png",
+        "title_en": "Amazon",
+        "title_fr": "Amazon",
+        "subtitle_en": "Creation of the platform",
+        "subtitle_fr": "Cr\u00e9ation de la plateforme",
+        "description_en": "<p><b>Amazon, Inc.</b>, is a Seattle, Washington-based, multinational technology company focusing in e-commerce, cloud computing, and artificial intelligence.</p>\r\n<p>Amazon is the largest e-commerce marketplace and cloud computing platform in the world as measured by revenue and market capitalization. Amazon.com was founded by Jeff Bezos on July 5, 1994, and started as an online bookstore but later diversified to sell video downloads/streaming, MP3 downloads/streaming, audiobook downloads/streaming, software, video games, electronics, apparel, furniture, food, toys, and jewelry. The company also owns a publishing arm, Amazon Publishing, a film and television studio, Amazon Studios, produces consumer electronics lines including Kindle e-readers, Fire tablets, Fire TV, and Echo devices, and is the world's largest provider of cloud infrastructure services (IaaS and PaaS) through its AWS subsidiary. Amazon has separate retail websites for some countries and also offers international shipping of some of its products to certain other countries. 100 million people subscribe to Amazon Prime.</p>\r\n<p>Amazon is the largest Internet company by revenue in the world and the second largest employer in the United States In 2015, Amazon surpassed Walmart as the most valuable retailer in the United States by market capitalization. In 2017, Amazon acquired Whole Foods Market for $13.4 billion, which vastly increased Amazon's presence as a brick-and-mortar retailer. The acquisition was interpreted by some as a direct attempt to challenge Walmart's traditional retail stores.</p>",
+        "description_fr": "<p><b>Amazon.com, Inc.</b> est une entreprise de commerce \u00e9lectronique nord-am\u00e9ricaine bas\u00e9e \u00e0 Seattle. Elle est un des g\u00e9ants du Web, regroup\u00e9s sous l'acronyme GAFAM, aux c\u00f4t\u00e9s de Google, Apple, Facebook et Microsoft.</p>\r\n<p>La sp\u00e9cialit\u00e9 initiale d'Amazon \u00e9tait la vente de livres, mais elle s'est diversifi\u00e9e vers la vente d'autres produits, d'abord par l'\u00e9largissement des produits culturels disponibles \u00e0 l'achat, puis vers la mise \u00e0 disposition progressive de produits de tous types. Aujourd'hui, m\u00eame des produits alimentaires peuvent \u00eatre command\u00e9s via Amazon.</p>\r\n<p>Cr\u00e9\u00e9e par Jeff Bezos en juillet 1994, l'entreprise a \u00e9t\u00e9 introduite en bourse au Nasdaq en mai 1997.</p>\r\n<p>La filiale fran\u00e7aise d'Amazon est ouverte en 2000. En 2016, Amazon devient le premier distributeur non alimentaire en France en termes de chiffre d'affaires.</p>\r\n<p>En 2017, la soci\u00e9t\u00e9 emploie 541&#160;900&#160;personnes dans le monde et a \u00e9tabli, outre le site originel am\u00e9ricain (ouvert en 1995), des sites sp\u00e9cifiques dans de nombreux pays.</p>",
+        "site_link": "https://www.amazon.fr/",
+        "date": "2018-11-16"
+    }
+},
+{
+    "model": "portfolioapp.project",
+    "pk": 8,
+    "fields": {
+        "category": 2,
+        "link_name": "ebay",
+        "image": "portfolio/ebay.png",
+        "title_en": "eBay",
+        "title_fr": "eBay",
+        "subtitle_en": "Site maintenance",
+        "subtitle_fr": "Maintenance du site",
+        "description_en": "<p><b>eBay Inc.</b> is an American multinational e-commerce corporation based in San Jose, California that facilitates consumer-to-consumer and business-to-consumer sales through its website. eBay was founded by Pierre Omidyar in the autumn of 1995, and became a notable success story of the dot-com bubble. eBay is a multibillion-dollar business with operations in about 30 countries, as of 2011. The company manages the eBay website, an online auction and shopping website in which people and businesses buy and sell a wide variety of goods and services worldwide. The website is free to use for buyers, but sellers are charged fees for listing items after a limited number of free listings, and again when those items are sold.</p>\r\n\r\n<p>In addition to eBay's original auction-style sales, the website has evolved and expanded to include: instant \"Buy It Now\" shopping; shopping by Universal Product Code, ISBN, or other kind of SKU number (via Half.com, which was shut down in 2017); online classified advertisements (via Kijiji, or eBay Classifieds); online event ticket trading (via StubHub); and other services. eBay previously offered online money transfers as part of its services (via PayPal, which was a wholly owned subsidiary of eBay from 2002 to 2015).</p>",
+        "description_fr": "<p><b>eBay </b> est une entreprise am\u00e9ricaine de courtage en ligne, connue par son site web de ventes aux ench\u00e8res du m\u00eame nom. Elle a \u00e9t\u00e9 cr\u00e9\u00e9e en 1995 par le Fran\u00e7ais Pierre Omidyar. Elle est devenue une r\u00e9f\u00e9rence mondiale dans son secteur et un ph\u00e9nom\u00e8ne de soci\u00e9t\u00e9. En 2009, elle comptait plus de 276 millions de membres inscrits.</p>\r\n\r\n<p>Le si\u00e8ge social d'eBay est \u00e0 San Jos\u00e9 dans la Silicon Valley en Californie. Devin Wenig en est le pr\u00e9sident directeur g\u00e9n\u00e9ral depuis juillet 2015. Cette soci\u00e9t\u00e9 emploie 13 000 personnes pour un chiffre d'affaires en 2007 de 7,67 milliards de dollars et de 8,54 en 2008 soit un b\u00e9n\u00e9fice de 1,78 milliard USD en 1 an. Port\u00e9 par le boom d'Internet et du commerce \u00e9lectronique, le site eBay conna\u00eet un \u00e9norme succ\u00e8s depuis ses d\u00e9buts.</p>",
+        "site_link": "https://www.ebay.com/",
+        "date": "2018-12-29"
+    }
+},
+{
+    "model": "portfolioapp.project",
+    "pk": 5,
+    "fields": {
+        "category": 7,
+        "link_name": "wikipedia",
+        "image": "portfolio/wiki.png",
+        "title_en": "Wikipedia",
+        "title_fr": "Wikip\u00e9dia",
+        "subtitle_en": "Site maintenance",
+        "subtitle_fr": "Maintenance du site",
+        "description_en": "<p><b>Wikipedia</b> is a multilingual, web-based, free encyclopedia based on a model of openly editable and viewable content, a wiki. It is the largest and most popular general reference work on the World Wide Web, and is one of the most popular websites by Alexa rank. It is owned and supported by the Wikimedia Foundation, a non-profit organization that operates on money it receives from donors.</p>\r\n\r\n<p>Wikipedia was launched on January 15, 2001, by Jimmy Wales and Larry Sanger. Sanger coined its name, as a portmanteau of wiki (the Hawai'ian word for \"quick\") and \"encyclopedia\". Initially an English-language encyclopedia, versions in other languages were quickly developed. With 5,819,042 articles,es 3] the English Wikipedia is the largest of the more than 290 Wikipedia encyclopedias. Overall, Wikipedia comprises more than 40 million articles in 301 different languages and by February 2014 it had reached 18 billion page views and nearly 500 million unique visitors per month.</p>\r\n\r\n<p>In 2005, Nature published a peer review comparing 42 hard science articles from Encyclop\u00e6dia Britannica and Wikipedia and found that Wikipedia's level of accuracy approached that of Britannica, although critics suggested that it might not have fared so well in a similar study of a random sampling of all articles or one focused on social science or contentious social issues. Time magazine stated that the open-door policy of allowing anyone to edit had made Wikipedia the biggest and possibly the best encyclopedia in the world, and was a testament to the vision of Jimmy Wales.</p>\r\n\r\n<p>Wikipedia has been criticized for exhibiting systemic bias, for presenting a mixture of \"truths, half truths, and some falsehoods\", and for being subject to manipulation and spin in controversial topics. In 2017, Facebook announced that it would help readers detect fake news by suitable links to Wikipedia articles. YouTube announced a similar plan in 2018.</p>",
+        "description_fr": "<p><b>Wikipedia</b> est une encyclop\u00e9die universelle, multilingue, cr\u00e9\u00e9e par Jimmy Wales et Larry Sanger le 15 janvier 2001, g\u00e9r\u00e9e par wiki dans le site web wikipedia.org. Les versions des diff\u00e9rentes langues utilisent le m\u00eame logiciel de publication, MediaWiki, et ont la m\u00eame apparence, mais elles comportent des variations dans leurs contenus, leurs structures et leurs modalit\u00e9s d'\u00e9dition et de gestion.</p>\r\n\r\n<p>L'encyclop\u00e9die ainsi que son environnement sont h\u00e9berg\u00e9s sur Internet gr\u00e2ce aux serveurs financ\u00e9s par la Wikimedia Foundation, organisation \u00e0 but non lucratif am\u00e9ricaine, d\u00e9positaire de la marque Wikip\u00e9dia.</p>\r\n\r\n<p>L'encyclop\u00e9die est en libre acc\u00e8s, en lecture comme en \u00e9criture, c'est-\u00e0-dire que n'importe qui peut, en acc\u00e9dant au site, modifier la quasi-totalit\u00e9 des articles publi\u00e9s sous licence CC-BY-SA 3.0. En octobre 2017, Wikip\u00e9dia est le cinqui\u00e8me site le plus fr\u00e9quent\u00e9 au monde, et constitue le plus grand et le plus populaire des ouvrages de r\u00e9f\u00e9rences g\u00e9n\u00e9rales d'Internet. En f\u00e9vrier 2014, il y avait mondialement presque 500 millions de visiteurs chaque mois et en mai 2014, 22 millions de comptes pour les \u00e9diteurs, dont plus de 73 000 sont consid\u00e9r\u00e9s comme actifs.\r\n\r\nHistoriquement, l'anglais a \u00e9t\u00e9 la principale langue utilis\u00e9e, avant qu'une multitude de sites ne soient ouverts dans d'autres langues, notamment la Wikip\u00e9dia en fran\u00e7ais le 23 mars 2001 (303 langues en f\u00e9vrier 2019). La Wikip\u00e9dia en anglais a toujours conserv\u00e9 cette importance relative : le nombre d'articles s'\u00e9l\u00e8ve \u00e0 plus de 5 millions.</p>",
+        "site_link": "https://www.wikipedia.org/",
+        "date": "2018-11-02"
+    }
+},
+{
+    "model": "portfolioapp.project",
+    "pk": 4,
+    "fields": {
+        "category": 1,
+        "link_name": "duck-duck-go",
+        "image": "portfolio/duck.png",
+        "title_en": "Duck Duck Go",
+        "title_fr": "Duck Duck Go",
+        "subtitle_en": "Creation of the application",
+        "subtitle_fr": "Cr\u00e9ation de l'application",
+        "description_en": "<p><b>DuckDuckGo (DDG)</b> is an Internet search engine that emphasizes protecting searchers' privacy and avoiding the filter bubble of personalized search results. DuckDuckGo distinguishes itself from other search engines by not profiling its users and by showing all users the same search results for a given search term, and emphasizes returning the best results, rather than the most results, generating those results from over 400 individual sources, including crowdsourced sites such as Wikipedia, and other search engines like Bing, Yahoo!, and Yandex. In February 2019, it had 35,343,668 daily direct searches on average.</p>\r\n\r\n<p>The company is based in Paoli, Pennsylvania, in Greater Philadelphia, and has 55 employees. The company name is a reference to the children's game duck, duck, goose.</p>\r\n\r\n<p>Some of DuckDuckGo's source code is free software hosted at GitHub under the Apache 2.0 License, but the core is proprietary. The company registered the domain names ddg.gg on February 22, 2011, ddg.co on September 20, 2013, and acquired duck.com on December 12, 2018, which are used as shortened URL aliases that redirect to duckduckgo.com.</p>",
+        "description_fr": "<p><b>DuckDuckGo</b> est un m\u00e9ta-moteur de recherche dont la soci\u00e9t\u00e9 \u00e9ditrice est situ\u00e9e \u00e0 Valley Forge en Pennsylvanie. Il se distingue en utilisant les informations d'externalisation ouverte provenant d'autres sites (comme Wikip\u00e9dia) dans le but d'enrichir les r\u00e9sultats traditionnels et d'am\u00e9liorer la pertinence. Il propose aussi son propre moteur de recherche.</p>\r\n\r\n<p>La philosophie de ce moteur de recherche est de pr\u00e9server la vie priv\u00e9e et de ne stocker aucune information personnelle concernant les utilisateurs (adresses IP et traces num\u00e9riques comme la signature du navigateur). Cependant, par d\u00e9faut, DuckDuckGo relaie des liens sponsoris\u00e9s (publicit\u00e9s) sur son moteur de recherche.</p>\r\n\r\n<p>DuckDuckGo a \u00e9t\u00e9 en forte progression depuis l'affaire PRISM/XKeyscore ; son trafic le classe 1 152e au niveau mondial le 29 ao\u00fbt 2013, selon le cabinet d'\u00e9tudes Alexa. En f\u00e9vrier 2019, il devient 194e.</p>\r\n\r\n<p>Il consacre une partie de ses revenus \u00e0 financer des projets libres.</p>",
+        "site_link": "https://duckduckgo.com",
+        "date": "2018-11-02"
+    }
+},
+{
+    "model": "portfolioapp.project",
+    "pk": 3,
+    "fields": {
+        "category": 3,
+        "link_name": "twitter",
+        "image": "portfolio/twitter.png",
+        "title_en": "Twitter",
+        "title_fr": "Twitter",
+        "subtitle_en": "Update of the application.",
+        "subtitle_fr": "Mise \u00e0 jour de l'application.",
+        "description_en": "<p><b>Twitter</b> is an American online news and social networking service on which users post and interact with messages known as \"tweets\". Tweets were originally restricted to 140 characters, but on November 7, 2017, this limit was doubled for all languages except Chinese, Japanese, and Korean. Registered users can post, like, and retweet tweets, but unregistered users can only read them. Users access Twitter through its website interface, through Short Message Service (SMS) or its mobile-device application software (\"app\"). Twitter, Inc. is based in San Francisco, California, and has more than 25 offices around the world.</p>\r\n\r\n<p>Twitter was created in March 2006 by Jack Dorsey, Noah Glass, Biz Stone, and Evan Williams and launched in July of that year. The service rapidly gained worldwide popularity. In 2012, more than 100 million users posted 340 million tweets a day, and the service handled an average of 1.6 billion search queries per day. In 2013, it was one of the ten most-visited websites and has been described as \"the SMS of the Internet\". As of 2016, Twitter had more than 319 million monthly active users. Since 2015 Twitter has been a hotbed of debates and news covering politics of the United States. During the 2016 U.S. presidential election, Twitter was the largest source of breaking news on the day, with 40 million election-related tweets sent by 10:00 p.m. (Eastern Time) that day. It was also a source of information on Brett Kavanaugh's Supreme Court nomination and the 2018 United States midterm elections, </p>",
+        "description_fr": "<p><b>Twitter</b> est un r\u00e9seau social de microblogage g\u00e9r\u00e9 par l'entreprise Twitter Inc. Il permet \u00e0 un utilisateur d\u2019envoyer gratuitement de brefs messages, appel\u00e9s tweets, sur internet, par messagerie instantan\u00e9e ou par SMS. Ces messages sont limit\u00e9s \u00e0 280 caract\u00e8res (140 caract\u00e8res auparavant).</p>\r\n\r\n<p>Twitter a \u00e9t\u00e9 cr\u00e9\u00e9 le 21 mars 2006 par Jack Dorsey, Evan Williams, Biz Stone et Noah Glass, et lanc\u00e9 en juillet de la m\u00eame ann\u00e9e. Le service est rapidement devenu populaire, jusqu'\u00e0 r\u00e9unir plus de 500 millions d'utilisateurs dans le monde fin f\u00e9vrier 2012. Au 5 mars 2017, Twitter compte 313 millions d\u2019utilisateurs actifs par mois avec 500 millions de tweets envoy\u00e9s par jour et est disponible en plus de 40 langues. En 2018, Twitter annonce pour la premi\u00e8re fois avoir fait du profit, notamment \u00e0 la suite de restrictions budg\u00e9taires.</p>\r\n\r\n<p>Le si\u00e8ge social de Twitter Inc. se situe aux \u00c9tats-Unis \u00e0 San Francisco. L'entreprise dispose de plus de 35 bureaux suppl\u00e9mentaires \u00e0 travers le monde et de serveurs informatiques \u00e0 New York.</p>",
+        "site_link": "https://twitter.com",
+        "date": "2019-01-04"
+    }
+}
+]

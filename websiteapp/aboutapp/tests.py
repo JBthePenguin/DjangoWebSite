@@ -1,6 +1,6 @@
 import os
 from websiteapp.browser_selenium import Browser
-from websiteapp.aboutapp.models import Service
+from websiteapp.aboutapp.models import Term, AboutCategory
 from websitedjango.settings import BASE_DIR
 
 
@@ -10,6 +10,8 @@ class BrowseAboutTests(Browser):
     def test_about(self):
         """ tests for about page"""
         self.selenium.get("".join([self.live_server_url, "/about/"]))
+        # title
+        self.assertEqual(self.selenium.title, "Django Website | À propos")
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")
         self.assertEqual(
@@ -20,14 +22,15 @@ class BrowseAboutTests(Browser):
         self.assertEqual(len(divs), 2)
         # services
         services = self.selenium.find_elements_by_css_selector(
-            "#main_about #Services .card")
+            "#main_about #services .card")
         self.assertEqual(len(services), 4)
         # skills
         skills = self.selenium.find_elements_by_css_selector(
-            "#main_about #Compétences .card")
+            "#main_about #skills .card")
         self.assertEqual(len(skills), 3)
         # services +1
-        Service.objects.create(
+        Term.objects.create(
+            category=AboutCategory.objects.get(pk=1),
             logo=os.path.join(BASE_DIR, "uploads/test.png"),
             name_en="test",
             name_fr="test",
@@ -36,11 +39,11 @@ class BrowseAboutTests(Browser):
         )
         self.selenium.get("".join([self.live_server_url, "/about/"]))
         services = self.selenium.find_elements_by_css_selector(
-            "#main_about #Services .card")
+            "#main_about #services .card")
         self.assertEqual(len(services), 5)
         # services -1
-        Service.objects.get(name_en="test").delete()
+        Term.objects.get(name_en="test").delete()
         self.selenium.get("".join([self.live_server_url, "/about/"]))
         services = self.selenium.find_elements_by_css_selector(
-            "#main_about #Services .card")
+            "#main_about #services .card")
         self.assertEqual(len(services), 4)

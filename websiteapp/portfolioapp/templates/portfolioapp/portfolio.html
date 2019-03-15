@@ -7,43 +7,52 @@
 <!-- Categories -->
 {% for category in categories %}
     <!-- Categorie -->
-    <div id="{{ category.name }}" class="container text-center">
+    <div id="{{ category.link_name }}" class="container text-center">
         <h4 class="text-danger">
             {{ category.name }}
         </h4>
         <div class="row">
             <!-- Projects -->
             {% for project in projects %}
-                {% if project.category == category %}
-                    <!-- Project -->
-                    <div class="col-md-4">
+                {% if project.category.link_name == category.link_name %}
+                    <!-- Project card -->
+                    <div class="col-md-4 mx-auto">
                         <div class="card {{ bg_class }} text-center">
                             <!-- Image -->
                             <img class="card-img-top w-75 mx-auto" src="{{ project.image.url }}" alt="Card image cap">
+                            <!---->
                             <div class="card-body">
                                 <!-- Title -->
                                 <h5 class="card-title">
                                     {{ project.title }}
                                 </h5>
+                                <!---->
                                 <!-- Subtitle -->
-                                 <h6 class="card-subtitle mb-2">
+                                <h6 class="card-subtitle mb-2">
                                     {{ project.subtitle }}
                                 </h6>
+                                <!---->
                                 <!-- Date -->
                                 <p class="card-text">
                                     {{ project.date|date:"F Y" }}
                                 </p>
-                                <!-- Button See details -->
-                                <a href="{% url 'portfolio' %}{{ project.id }}/" class="btn btn-danger">
+                                <!---->
+                                <!-- Button -->
+                                <a href="{% url 'portfolio' %}{{ project.link_name }}/" class="btn btn-danger">
                                     {{ btn_card_text }}
                                 </a>
+                                <!---->
                             </div>
                         </div>
                     </div>
+                    <!---->
                 {% endif %}
             {% endfor %}
+            <!---->
         </div>
     </div>
+    <!---->
 {% endfor %}
+<!---->
 {% endblock %}
-<!-- -->
+<!---->

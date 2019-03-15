@@ -9,7 +9,7 @@
     <div class="card {{ bg_class }}">
         <!-- Image -->
         <img class="card-img-top w-75 mx-auto" src="{{ project.image.url }}" alt="Card image cap">
-        <div class="card-body">
+        <div class="card-body text-justify">
             <!-- Title -->
             <h5 class="card-title text-center">
                 {{ project.subtitle }}
@@ -19,18 +19,14 @@
                 {{ project.date|date:"F Y" }}
             </h6>
             <!-- Text -->
-            <p class="card-text text-left">
+            <p class="card-text">
                 {{ project.description|safe }}
             </p>
             <!-- Links -->
             <div class="text-center row">
-                <!-- Site -->
-                <a href="{{ project.link }}" class="btn btn-danger col-2 mx-auto" onclick="window.open(this.href);  return false;">
-                    {{ btn_site_text }}
-                </a>
-                <!-- Code --> 
-                <a href="{{ project.github_link }}" class="btn btn-danger col-2 mx-auto" onclick="window.open(this.href);  return false;">
-                    {{ btn_code_text }}
+                <!-- Button --> 
+                <a href="{{ project.site_link }}" class="btn btn-danger col-md-2 col-6 mx-auto" onclick="window.open(this.href);  return false;">
+                    {{ btn_card_text }}
                 </a>
             </div>
         </div>

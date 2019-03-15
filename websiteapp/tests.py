@@ -11,7 +11,7 @@ class BrowseBaseIndexTests(Browser):
         """ tests for nav bar"""
         self.selenium.get(self.live_server_url)
         # title
-        self.assertEqual(self.selenium.title, "Titre du site")
+        self.assertEqual(self.selenium.title, "Django Website | Accueil")
         # nav links
         nav_links = self.selenium.find_elements_by_css_selector(
             "nav.navbar .nav-link"
@@ -101,7 +101,7 @@ class BrowseBaseIndexTests(Browser):
         WebDriverWait(self.selenium, 10).until(
             EC.presence_of_element_located((By.LINK_TEXT, "About")))
         page_title = self.selenium.title
-        self.assertEqual(page_title, "Site's title")
+        self.assertEqual(page_title, "Django Website | Home")
         # french
         checkboxe()
         WebDriverWait(self.selenium, 10).until(
@@ -112,9 +112,11 @@ class BrowseBaseIndexTests(Browser):
     def test_index(self):
         """ tests for index page"""
         self.selenium.get(self.live_server_url)
+        # title
+        self.assertEqual(self.selenium.title, "Django Website | Accueil")
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")
-        self.assertEqual(header_title.text, "Titre du site")
+        self.assertEqual(header_title.text, "Accueil")
         # main
         links = self.selenium.find_elements_by_css_selector(
             "#main_index div a h4")

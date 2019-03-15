@@ -4,5 +4,5 @@ from websiteapp.portfolioapp import views
 
 urlpatterns = [
     path('', views.portfolio, name='portfolio'),
-    path('<int:project_id>/', views.project),
+    path('<str:project_name>/', views.project),
 ]

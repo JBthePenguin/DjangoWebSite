@@ -1,0 +1,29 @@
+[
+{
+    "model": "contactapp.contactitem",
+    "pk": 3,
+    "fields": {
+        "logo": "phone",
+        "text": "01 23 45 67 89",
+        "position": 2
+    }
+},
+{
+    "model": "contactapp.contactitem",
+    "pk": 2,
+    "fields": {
+        "logo": "envelope",
+        "text": "email@mail.com",
+        "position": 1
+    }
+},
+{
+    "model": "contactapp.contactitem",
+    "pk": 1,
+    "fields": {
+        "logo": "home",
+        "text": "3 route du Gers, L.A, CALIFORNIA, USA",
+        "position": 0
+    }
+}
+]

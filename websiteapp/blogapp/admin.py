@@ -5,8 +5,8 @@ from websiteapp.blogapp.models import BlogCategory, Post, Comment
 
 @admin.register(BlogCategory)
 class BlogCategoryAdmin(admin.ModelAdmin):
-    search_fields = ('name_en', 'name_fr',)
-    list_display = ('name_en', 'name_fr',)
+    search_fields = ('link_name', 'name_en', 'name_fr', 'position')
+    list_display = ('link_name', 'name_en', 'name_fr', 'position')
 
 
 class CategoryModelChoiceField(forms.ModelChoiceField):

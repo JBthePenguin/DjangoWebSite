@@ -8,6 +8,8 @@ websiteapp/__pycache__/
 
 websiteapp/migrations/__pycache__/
 
+websiteapp/migrations/0*.py
+
 websiteapp/aboutapp/__pycache__/
 
 websiteapp/aboutapp/migrations/__pycache__/
