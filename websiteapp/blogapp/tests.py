@@ -12,7 +12,7 @@ class BrowseBlogTests(Browser):
         """ tests for blog page"""
         self.selenium.get("".join([self.live_server_url, "/blog/"]))
         # title
-        self.assertEqual(self.selenium.title, "Django Website | Blog")
+        self.assertEqual(self.selenium.title, "Django Website|Blog")
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")
         self.assertEqual("Blog", header_title.text)
@@ -47,10 +47,10 @@ class BrowseBlogTests(Browser):
         self.selenium.get("".join([self.live_server_url, "/blog/jquery/"]))
         # title
         self.assertEqual(
-            self.selenium.title, "Django Website | Blog | Front-End")
+            self.selenium.title, "Django Website|Blog|Front-End")
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")
-        self.assertEqual("Blog | Front-End", header_title.text)
+        self.assertEqual("Blog|Front-End", header_title.text)
         project_title = self.selenium.find_element_by_tag_name("h3")
         self.assertEqual("jQuery", project_title.text)
         # main

@@ -11,7 +11,7 @@ class BrowseContactTests(Browser):
         """ tests for contact page"""
         self.selenium.get("".join([self.live_server_url, "/contact/"]))
         # title
-        self.assertEqual(self.selenium.title, "Django Website | Contact")
+        self.assertEqual(self.selenium.title, "Django Website|Contact")
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")
         subtitle = self.selenium.find_element_by_css_selector("h3 p")

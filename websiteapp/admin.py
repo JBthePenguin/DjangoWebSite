@@ -8,7 +8,7 @@ class PageAdmin(admin.ModelAdmin):
     search_fields = ('link_name', 'title_en', 'title_fr',)
     list_display = (
         'link_name', 'title_en', 'title_fr',
-        'subtitle_en', 'subtitle_fr')
+        'subtitle_en', 'subtitle_fr', 'position')
 
 
 @admin.register(FooterItem)
@@ -20,7 +20,7 @@ class FooterItemAdmin(admin.ModelAdmin):
 @admin.register(SocialLink)
 class SocialLinkAdmin(admin.ModelAdmin):
     search_fields = ('name',)
-    list_display = ('name', 'url',)
+    list_display = ('name', 'url', 'position')
 
 
 @admin.register(CardButton)

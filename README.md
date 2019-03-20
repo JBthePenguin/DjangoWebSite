@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/JBthePenguin/DjangoWebSite.svg?branch=master)](https://travis-ci.com/JBthePenguin/DjangoWebSite) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4be6e709dcf74320ad165186b684728e)](https://app.codacy.com/app/JBthePenguin/DjangoWebSite?utm_source=github.com&utm_medium=referral&utm_content=JBthePenguin/DjangoWebSite&utm_campaign=Badge_Grade_Dashboard) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
 ## Structure for a Django Web Site
-**A structure for a Web site with a home, a presentation, a portfolio, a blog and a contact pages and an admin interface to manage the content.\
+**A structure for a Web site with home, presentation, portfolio, blog, contact pages and an admin interface to manage the content.\
 It's using the frameworks [Django](https://www.djangoproject.com/), [Bootstrap 4](https://getbootstrap.com/), [jQuery](https://jquery.com/).
 So, to install and use it :**
 ### Create a PostgreSQL database for the application and a new user
@@ -18,7 +18,7 @@ postgres@somewhere:~$ exit
 ```
 ### Clone the application and install the necessary requirements
 *!!! maybe you have to install [virtualenv](https://virtualenv.pypa.io/en/stable/) !!!* \
-Clone the folder, go inside, create a virtual environment for Python with virtualenv, use it, and install all necessary dependencies ([django](https://www.djangoproject.com/foundation/), [django-cleanup](https://github.com/un1t/django-cleanup), [django-debug-toolbar](https://django-debug-toolbar.readthedocs.io/en/stable/), [django-fixture-magic](https://github.com/davedash/django-fixture-magic), [future](https://pypi.org/project/future/), [psycopg2](https://github.com/psycopg/psycopg2), [psycopg2-binary](https://pypi.org/project/psycopg2-binary/), [Pillow](https://pillow.readthedocs.io/en/stable/), [selenium](https://selenium-python.readthedocs.io/)):
+Clone the folder, go inside, create a virtual environment for Python with virtualenv, use it, and install all necessary dependencies ([django](https://www.djangoproject.com/foundation/), [django-cleanup](https://github.com/un1t/django-cleanup), [django-debug-toolbar](https://django-debug-toolbar.readthedocs.io/en/stable/), [django-fixture-magic](https://github.com/davedash/django-fixture-magic), [django-grappelli](https://django-grappelli.readthedocs.io/en/latest/quickstart.html), [django-filebrowser](https://django-filebrowser.readthedocs.io/en/latest/), [feedparser](https://pypi.org/project/feedparser/), [future](https://pypi.org/project/future/), [psycopg2](https://github.com/psycopg/psycopg2), [psycopg2-binary](https://pypi.org/project/psycopg2-binary/), [Pillow](https://pillow.readthedocs.io/en/stable/), [selenium](https://selenium-python.readthedocs.io/)):
 ```shell
 $ git clone https://github.com/JBthePenguin/DjangoWebSite.git
 $ cd DjangoWebSite
@@ -37,13 +37,18 @@ Load datas from *db_dump.json*:
 ```shell
 (env)$ python manage.py loaddata db_dump.json
 ```
+### Collect static files
+Put all static files in *static* directory:
+```shell
+(env)$ python manage.py collectstatic
+```
 ### Start and use the application
 Run the server:
 ```shell
 (env)$ python manage.py runserver
 ```
 **NOW, with your favorite browser, go to this url [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to visit the site and [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin) to use the admin site (login -> admin:test). Here, you can in:**
-* **website: modify all the content (titles, subtitles, navbar items, ...).**
+* **website: modify page's titles, footer items, social links, ...).**
 * **about: manage categories and terms.**
 * **portfolio: manage categories and projects.**
 * **blog: manage categories, posts and valid comments**

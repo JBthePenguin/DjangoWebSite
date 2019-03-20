@@ -29,7 +29,7 @@ def project(request, project_name):
     # Page
     page = {
         "link_name": "portfolio",
-        "title": "Portfolio | {}".format(project.category_name),
+        "title": "Portfolio|{}".format(project.category_name),
         "subtitle": project.title}
     # Card button
     buttons_card = get_buttons_card("project")

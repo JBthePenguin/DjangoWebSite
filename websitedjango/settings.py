@@ -31,9 +31,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.contenttypes',
+    'grappelli.dashboard',
+    'grappelli',
+    'filebrowser',
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -144,6 +147,11 @@ INTERNAL_IPS = ['127.0.0.1']
 # ColorTheme
 THEME = "dark"
 
+# Admin site
+GRAPPELLI_ADMIN_TITLE = "Administration Django Website"
+GRAPPELLI_INDEX_DASHBOARD = 'websitedjango.dashboard.CustomIndexDashboard'
+FILEBROWSER_DIRECTORY = ''
+DIRECTORY = ''
 
 # database for TravisCI
 if 'TRAVIS' in os.environ:

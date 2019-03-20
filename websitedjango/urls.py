@@ -18,10 +18,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from filebrowser.sites import site
 
 
 urlpatterns = [
     path('', include('websiteapp.urls')),
+    path('admin/filebrowser/', site.urls),
+    path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
 ]
 

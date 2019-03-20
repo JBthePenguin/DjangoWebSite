@@ -11,7 +11,7 @@ class BrowsePortfolioTests(Browser):
         """ tests for portfolio page"""
         self.selenium.get("".join([self.live_server_url, "/portfolio/"]))
         # title
-        self.assertEqual(self.selenium.title, "Django Website | Portfolio")
+        self.assertEqual(self.selenium.title, "Django Website|Portfolio")
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")
         self.assertEqual("Portfolio", header_title.text)
@@ -55,10 +55,10 @@ class BrowsePortfolioTests(Browser):
         # title
         self.assertEqual(
             self.selenium.title,
-            "Django Website | Portfolio | Sites commerciaux")
+            "Django Website|Portfolio|Sites commerciaux")
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")
-        self.assertEqual("Portfolio | Sites commerciaux", header_title.text)
+        self.assertEqual("Portfolio|Sites commerciaux", header_title.text)
         project_title = self.selenium.find_element_by_tag_name("h3")
         self.assertEqual("Alibaba", project_title.text)
         # main

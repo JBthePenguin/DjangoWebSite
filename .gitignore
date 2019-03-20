@@ -1,5 +1,7 @@
 geckodriver.log
 
+static/
+
 env/
 
 websitedjango/__pycache__/

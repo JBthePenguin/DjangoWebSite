@@ -11,7 +11,7 @@ class BrowseAboutTests(Browser):
         """ tests for about page"""
         self.selenium.get("".join([self.live_server_url, "/about/"]))
         # title
-        self.assertEqual(self.selenium.title, "Django Website | À propos")
+        self.assertEqual(self.selenium.title, "Django Website|À propos")
         # header
         header_title = self.selenium.find_element_by_tag_name("h1")
         self.assertEqual(

@@ -31,7 +31,7 @@ def post(request, post_name):
     # Page post
     page = {
         "link_name": "blog",
-        "title": "Blog | {}".format(post.category_name),
+        "title": "Blog|{}".format(post.category_name),
         "subtitle": post.title}
     # Main titles
     main_titles = get_page("post")

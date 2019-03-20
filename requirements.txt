@@ -6,6 +6,12 @@ django-debug-toolbar
 
 django-fixture-magic
 
+django-grappelli
+
+django-filebrowser
+
+feedparser
+
 future
 
 psycopg2

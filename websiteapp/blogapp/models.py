@@ -10,6 +10,10 @@ class BlogCategory(models.Model):
     name_fr = models.CharField(db_index=True, max_length=255)
     position = models.IntegerField(db_index=True, default=0)
 
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
 
 def get_blog_categories():
     """ return all categories in the good language """
